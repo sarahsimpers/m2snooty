@@ -212,7 +212,7 @@ class RestRenderer(mistune.Renderer):
 
     def _raw_html(self, html):
         self._include_raw_html = True
-        return r'\ :raw-html-m2r:`{}`\ '.format(html)
+        return r''.format(html)
 
     def block_code(self, code, lang=None):
         if lang == 'math':

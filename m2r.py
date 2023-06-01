@@ -376,7 +376,7 @@ class RestRenderer(mistune.Renderer):
         if self.anonymous_references:
             underscore = '__'
         else:
-            underscore = '_'
+            underscore = '__'
         if title:
             return self._raw_html(
                 '<a href="{link}" title="{title}">{text}</a>'.format(
@@ -532,7 +532,7 @@ class M2R(mistune.Markdown):
                   .replace('\\ .', '.')
                   )
         if self.renderer._include_raw_html:
-            return prolog + output
+            return output
         else:
             return output
 

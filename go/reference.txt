@@ -1,0 +1,1682 @@
+
+SDK Reference
+=============
+
+Documentation for SDK Endpoints
+-------------------------------
+
+All URIs are relative to *https://cloud.mongodb.com*
+
+.. list-table::
+   :header-rows: 1
+
+   * - Class
+     - Method
+     - HTTP request
+     - Description
+   * - *AWSClustersDNSApi*
+     - `GetAWSCustomDNS <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AWSClustersDNSApi.md#getawscustomdns>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/awsCustomDNS
+     - Return One Custom DNS Configuration for Atlas Clusters on AWS
+   * - *AWSClustersDNSApi*
+     - `ToggleAWSCustomDNS <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AWSClustersDNSApi.md#toggleawscustomdns>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/awsCustomDNS
+     - Toggle State of One Custom DNS Configuration for Atlas Clusters on AWS
+   * - *AccessTrackingApi*
+     - `ListAccessLogsByClusterName <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AccessTrackingApi.md#listaccesslogsbyclustername>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/dbAccessHistory/clusters/{clusterName}
+     - Return Database Access History for One Cluster using Its Cluster Name
+   * - *AccessTrackingApi*
+     - `ListAccessLogsByHostname <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AccessTrackingApi.md#listaccesslogsbyhostname>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/dbAccessHistory/processes/{hostname}
+     - Return Database Access History for One Cluster using Its Hostname
+   * - *AlertConfigurationsApi*
+     - `CreateAlertConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertConfigurationsApi.md#createalertconfiguration>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/alertConfigs
+     - Create One Alert Configuration in One Project
+   * - *AlertConfigurationsApi*
+     - `DeleteAlertConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertConfigurationsApi.md#deletealertconfiguration>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/alertConfigs/{alertConfigId}
+     - Remove One Alert Configuration from One Project
+   * - *AlertConfigurationsApi*
+     - `GetAlertConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertConfigurationsApi.md#getalertconfiguration>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/alertConfigs/{alertConfigId}
+     - Return One Alert Configuration from One Project
+   * - *AlertConfigurationsApi*
+     - `ListAlertConfigurationMatchersFieldNames <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertConfigurationsApi.md#listalertconfigurationmatchersfieldnames>`__
+     - **Get** /api/atlas/v2/alertConfigs/matchers/fieldNames
+     - Get All Alert Configuration Matchers Field Names
+   * - *AlertConfigurationsApi*
+     - `ListAlertConfigurations <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertConfigurationsApi.md#listalertconfigurations>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/alertConfigs
+     - Return All Alert Configurations for One Project
+   * - *AlertConfigurationsApi*
+     - `ListAlertConfigurationsByAlertId <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertConfigurationsApi.md#listalertconfigurationsbyalertid>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/alerts/{alertId}/alertConfigs
+     - Return All Alert Configurations Set for One Alert
+   * - *AlertConfigurationsApi*
+     - `ToggleAlertConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertConfigurationsApi.md#togglealertconfiguration>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/alertConfigs/{alertConfigId}
+     - Toggle One State of One Alert Configuration in One Project
+   * - *AlertConfigurationsApi*
+     - `UpdateAlertConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertConfigurationsApi.md#updatealertconfiguration>`__
+     - **Put** /api/atlas/v2/groups/{groupId}/alertConfigs/{alertConfigId}
+     - Update One Alert Configuration for One Project
+   * - *AlertsApi*
+     - `AcknowledgeAlert <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertsApi.md#acknowledgealert>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/alerts/{alertId}
+     - Acknowledge One Alert from One Project
+   * - *AlertsApi*
+     - `GetAlert <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertsApi.md#getalert>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/alerts/{alertId}
+     - Return One Alert from One Project
+   * - *AlertsApi*
+     - `ListAlerts <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertsApi.md#listalerts>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/alerts
+     - Return All Alerts from One Project
+   * - *AlertsApi*
+     - `ListAlertsByAlertConfigurationId <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AlertsApi.md#listalertsbyalertconfigurationid>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/alertConfigs/{alertConfigId}/alerts
+     - Return All Open Alerts for Alert Configuration
+   * - *AtlasSearchApi*
+     - `CreateAtlasSearchIndex <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AtlasSearchApi.md#createatlassearchindex>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/fts/indexes
+     - Create One Atlas Search Index
+   * - *AtlasSearchApi*
+     - `DeleteAtlasSearchIndex <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AtlasSearchApi.md#deleteatlassearchindex>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/fts/indexes/{indexId}
+     - Remove One Atlas Search Index
+   * - *AtlasSearchApi*
+     - `GetAtlasSearchIndex <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AtlasSearchApi.md#getatlassearchindex>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/fts/indexes/{indexId}
+     - Return One Atlas Search Index
+   * - *AtlasSearchApi*
+     - `ListAtlasSearchIndexes <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AtlasSearchApi.md#listatlassearchindexes>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/fts/indexes/{databaseName}/{collectionName}
+     - Return All Atlas Search Indexes for One Collection
+   * - *AtlasSearchApi*
+     - `UpdateAtlasSearchIndex <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AtlasSearchApi.md#updateatlassearchindex>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/fts/indexes/{indexId}
+     - Update One Atlas Search Index
+   * - *AuditingApi*
+     - `GetAuditingConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AuditingApi.md#getauditingconfiguration>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/auditLog
+     - Return the Auditing Configuration for One Project
+   * - *AuditingApi*
+     - `UpdateAuditingConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/AuditingApi.md#updateauditingconfiguration>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/auditLog
+     - Update Auditing Configuration for One Project
+   * - *CloudBackupsApi*
+     - `CancelBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#cancelbackuprestorejob>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/restoreJobs/{restoreJobId}
+     - Cancel One Restore Job of One Cluster
+   * - *CloudBackupsApi*
+     - `CreateBackupExportJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#createbackupexportjob>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/exports
+     - Create One Cloud Backup Snapshot Export Job
+   * - *CloudBackupsApi*
+     - `CreateBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#createbackuprestorejob>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/restoreJobs
+     - Restore One Snapshot of One Cluster
+   * - *CloudBackupsApi*
+     - `CreateExportBucket <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#createexportbucket>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/backup/exportBuckets
+     - Grant Access to AWS S3 Bucket for Cloud Backup Snapshot Exports
+   * - *CloudBackupsApi*
+     - `CreateServerlessBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#createserverlessbackuprestorejob>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/serverless/{clusterName}/backup/restoreJobs
+     - Restore One Snapshot of One Serverless Instance
+   * - *CloudBackupsApi*
+     - `DeleteAllBackupSchedules <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#deleteallbackupschedules>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/schedule
+     - Remove All Cloud Backup Schedules
+   * - *CloudBackupsApi*
+     - `DeleteExportBucket <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#deleteexportbucket>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/backup/exportBuckets/{exportBucketId}
+     - Revoke Access to AWS S3 Bucket for Cloud Backup Snapshot Exports
+   * - *CloudBackupsApi*
+     - `DeleteReplicaSetBackup <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#deletereplicasetbackup>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/snapshots/{snapshotId}
+     - Remove One Replica Set Cloud Backup
+   * - *CloudBackupsApi*
+     - `DeleteShardedClusterBackup <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#deleteshardedclusterbackup>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/snapshots/shardedCluster/{snapshotId}
+     - Remove One Sharded Cluster Cloud Backup
+   * - *CloudBackupsApi*
+     - `GetBackupExportJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getbackupexportjob>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/exports/{exportId}
+     - Return One Cloud Backup Snapshot Export Job
+   * - *CloudBackupsApi*
+     - `GetBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getbackuprestorejob>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/restoreJobs/{restoreJobId}
+     - Return One Restore Job of One Cluster
+   * - *CloudBackupsApi*
+     - `GetBackupSchedule <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getbackupschedule>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/schedule
+     - Return One Cloud Backup Schedule
+   * - *CloudBackupsApi*
+     - `GetDataProtectionSettings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getdataprotectionsettings>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/backupCompliancePolicy
+     - Return the Backup Compliance Policy settings
+   * - *CloudBackupsApi*
+     - `GetExportBucket <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getexportbucket>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/backup/exportBuckets/{exportBucketId}
+     - Return One AWS S3 Bucket Used for Cloud Backup Snapshot Exports
+   * - *CloudBackupsApi*
+     - `GetReplicaSetBackup <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getreplicasetbackup>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/snapshots/{snapshotId}
+     - Return One Replica Set Cloud Backup
+   * - *CloudBackupsApi*
+     - `GetServerlessBackup <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getserverlessbackup>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/serverless/{clusterName}/backup/snapshots/{snapshotId}
+     - Return One Snapshot of One Serverless Instance
+   * - *CloudBackupsApi*
+     - `GetServerlessBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getserverlessbackuprestorejob>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/serverless/{clusterName}/backup/restoreJobs/{restoreJobId}
+     - Return One Restore Job for One Serverless Instance
+   * - *CloudBackupsApi*
+     - `GetShardedClusterBackup <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#getshardedclusterbackup>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/snapshots/shardedCluster/{snapshotId}
+     - Return One Sharded Cluster Cloud Backup
+   * - *CloudBackupsApi*
+     - `ListBackupExportJobs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#listbackupexportjobs>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/exports
+     - Return All Cloud Backup Snapshot Export Jobs
+   * - *CloudBackupsApi*
+     - `ListBackupRestoreJobs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#listbackuprestorejobs>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/restoreJobs
+     - Return All Restore Jobs for One Cluster
+   * - *CloudBackupsApi*
+     - `ListExportBuckets <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#listexportbuckets>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/backup/exportBuckets
+     - Return All AWS S3 Buckets Used for Cloud Backup Snapshot Exports
+   * - *CloudBackupsApi*
+     - `ListReplicaSetBackups <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#listreplicasetbackups>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/snapshots
+     - Return All Replica Set Cloud Backups
+   * - *CloudBackupsApi*
+     - `ListServerlessBackupRestoreJobs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#listserverlessbackuprestorejobs>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/serverless/{clusterName}/backup/restoreJobs
+     - Return All Restore Jobs for One Serverless Instance
+   * - *CloudBackupsApi*
+     - `ListServerlessBackups <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#listserverlessbackups>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/serverless/{clusterName}/backup/snapshots
+     - Return All Snapshots of One Serverless Instance
+   * - *CloudBackupsApi*
+     - `ListShardedClusterBackups <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#listshardedclusterbackups>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/snapshots/shardedClusters
+     - Return All Sharded Cluster Cloud Backups
+   * - *CloudBackupsApi*
+     - `TakeSnapshot <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#takesnapshot>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/snapshots
+     - Take One On-Demand Snapshot
+   * - *CloudBackupsApi*
+     - `UpdateBackupSchedule <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#updatebackupschedule>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/schedule
+     - Update Cloud Backup Schedule for One Cluster
+   * - *CloudBackupsApi*
+     - `UpdateDataProtectionSettings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#updatedataprotectionsettings>`__
+     - **Put** /api/atlas/v2/groups/{groupId}/backupCompliancePolicy
+     - Update or enable the Backup Compliance Policy settings
+   * - *CloudBackupsApi*
+     - `UpdateSnapshotRetention <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudBackupsApi.md#updatesnapshotretention>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/snapshots/{snapshotId}
+     - Change Expiration Date for One Cloud Backup
+   * - *CloudMigrationServiceApi*
+     - `CreateLinkToken <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudMigrationServiceApi.md#createlinktoken>`__
+     - **Post** /api/atlas/v2/orgs/{orgId}/liveMigrations/linkTokens
+     - Create One Link-Token
+   * - *CloudMigrationServiceApi*
+     - `CreatePushMigration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudMigrationServiceApi.md#createpushmigration>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/liveMigrations
+     - Migrate One Local Managed Cluster to MongoDB Atlas
+   * - *CloudMigrationServiceApi*
+     - `CutoverMigration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudMigrationServiceApi.md#cutovermigration>`__
+     - **Put** /api/atlas/v2/groups/{groupId}/liveMigrations/{liveMigrationId}/cutover
+     - Cut Over the Migrated Cluster
+   * - *CloudMigrationServiceApi*
+     - `DeleteLinkToken <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudMigrationServiceApi.md#deletelinktoken>`__
+     - **Delete** /api/atlas/v2/orgs/{orgId}/liveMigrations/linkTokens
+     - Remove One Link-Token
+   * - *CloudMigrationServiceApi*
+     - `GetPushMigration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudMigrationServiceApi.md#getpushmigration>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/liveMigrations/{liveMigrationId}
+     - Return One Migration Job
+   * - *CloudMigrationServiceApi*
+     - `GetValidationStatus <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudMigrationServiceApi.md#getvalidationstatus>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/liveMigrations/validate/{validationId}
+     - Return One Migration Validation Job
+   * - *CloudMigrationServiceApi*
+     - `ListSourceProjects <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudMigrationServiceApi.md#listsourceprojects>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/liveMigrations/availableProjects
+     - Return All Projects Available for Migration
+   * - *CloudMigrationServiceApi*
+     - `ValidateMigration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudMigrationServiceApi.md#validatemigration>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/liveMigrations/validate
+     - Validate One Migration Request
+   * - *CloudProviderAccessApi*
+     - `AuthorizeCloudProviderAccessRole <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudProviderAccessApi.md#authorizecloudprovideraccessrole>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/cloudProviderAccess/{roleId}
+     - Authorize One Cloud Provider Access Role
+   * - *CloudProviderAccessApi*
+     - `CreateCloudProviderAccessRole <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudProviderAccessApi.md#createcloudprovideraccessrole>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/cloudProviderAccess
+     - Create One Cloud Provider Access Role
+   * - *CloudProviderAccessApi*
+     - `DeauthorizeCloudProviderAccessRole <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudProviderAccessApi.md#deauthorizecloudprovideraccessrole>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/cloudProviderAccess/{cloudProvider}/{roleId}
+     - Deauthorize One Cloud Provider Access Role
+   * - *CloudProviderAccessApi*
+     - `GetCloudProviderAccessRole <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudProviderAccessApi.md#getcloudprovideraccessrole>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/cloudProviderAccess/{roleId}
+     - Return specified Cloud Provider Access Role
+   * - *CloudProviderAccessApi*
+     - `ListCloudProviderAccessRoles <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CloudProviderAccessApi.md#listcloudprovideraccessroles>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/cloudProviderAccess
+     - Return All Cloud Provider Access Roles
+   * - *ClusterOutageSimulationApi*
+     - `EndOutageSimulation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClusterOutageSimulationApi.md#endoutagesimulation>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/outageSimulation
+     - End an Outage Simulation
+   * - *ClusterOutageSimulationApi*
+     - `GetOutageSimulation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClusterOutageSimulationApi.md#getoutagesimulation>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/outageSimulation
+     - Return One Outage Simulation
+   * - *ClusterOutageSimulationApi*
+     - `StartOutageSimulation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClusterOutageSimulationApi.md#startoutagesimulation>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/outageSimulation
+     - Start an Outage Simulation
+   * - *ClustersApi*
+     - `GetClusterAdvancedConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#getclusteradvancedconfiguration>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/processArgs
+     - Return One Advanced Configuration Options for One Cluster
+   * - *ClustersApi*
+     - `GetClusterStatus <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#getclusterstatus>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/status
+     - Return Status of All Cluster Operations
+   * - *ClustersApi*
+     - `GetSampleDatasetLoadStatus <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#getsampledatasetloadstatus>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/sampleDatasetLoad/{sampleDatasetId}
+     - Check Status of Cluster Sample Dataset Request
+   * - *ClustersApi*
+     - `ListCloudProviderRegions <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#listcloudproviderregions>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/provider/regions
+     - Return All Cloud Provider Regions
+   * - *ClustersApi*
+     - `ListClustersForAllProjects <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#listclustersforallprojects>`__
+     - **Get** /api/atlas/v2/clusters
+     - Return All Authorized Clusters in All Projects
+   * - *ClustersApi*
+     - `LoadSampleDataset <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#loadsampledataset>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/sampleDatasetLoad/{name}
+     - Load Sample Dataset Request into Cluster
+   * - *ClustersApi*
+     - `UpdateClusterAdvancedConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#updateclusteradvancedconfiguration>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/processArgs
+     - Update Advanced Configuration Options for One Cluster
+   * - *ClustersApi*
+     - `UpgradeSharedCluster <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#upgradesharedcluster>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/tenantUpgrade
+     - Upgrade One Shared-tier Cluster
+   * - *ClustersApi*
+     - `UpgradeSharedClusterToServerless <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ClustersApi.md#upgradesharedclustertoserverless>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/tenantUpgradeToServerless
+     - Upgrades One Shared-Tier Cluster to the Serverless Instance
+   * - *CustomDatabaseRolesApi*
+     - `CreateCustomDatabaseRole <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CustomDatabaseRolesApi.md#createcustomdatabaserole>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/customDBRoles/roles
+     - Create One Custom Role
+   * - *CustomDatabaseRolesApi*
+     - `DeleteCustomDatabaseRole <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CustomDatabaseRolesApi.md#deletecustomdatabaserole>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/customDBRoles/roles/{roleName}
+     - Remove One Custom Role from One Project
+   * - *CustomDatabaseRolesApi*
+     - `GetCustomDatabaseRole <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CustomDatabaseRolesApi.md#getcustomdatabaserole>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/customDBRoles/roles/{roleName}
+     - Return One Custom Role in One Project
+   * - *CustomDatabaseRolesApi*
+     - `ListCustomDatabaseRoles <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CustomDatabaseRolesApi.md#listcustomdatabaseroles>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/customDBRoles/roles
+     - Return All Custom Roles in One Project
+   * - *CustomDatabaseRolesApi*
+     - `UpdateCustomDatabaseRole <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/CustomDatabaseRolesApi.md#updatecustomdatabaserole>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/customDBRoles/roles/{roleName}
+     - Update One Custom Role in One Project
+   * - *DataFederationApi*
+     - `CreateDataFederationPrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#createdatafederationprivateendpoint>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/privateNetworkSettings/endpointIds
+     - Create One Federated Database Instance and Online Archive Private Endpoint for One Project
+   * - *DataFederationApi*
+     - `CreateFederatedDatabase <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#createfederateddatabase>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/dataFederation
+     - Create One Federated Database Instance in One Project
+   * - *DataFederationApi*
+     - `CreateOneDataFederationQueryLimit <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#createonedatafederationquerylimit>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/dataFederation/{tenantName}/limits/{limitName}
+     - Configure One Query Limit for One Federated Database Instance
+   * - *DataFederationApi*
+     - `DeleteDataFederationPrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#deletedatafederationprivateendpoint>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/privateNetworkSettings/endpointIds/{endpointId}
+     - Remove One Federated Database Instance and Online Archive Private Endpoint from One Project
+   * - *DataFederationApi*
+     - `DeleteFederatedDatabase <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#deletefederateddatabase>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/dataFederation/{tenantName}
+     - Remove One Federated Database Instance from One Project
+   * - *DataFederationApi*
+     - `DeleteOneDataFederationInstanceQueryLimit <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#deleteonedatafederationinstancequerylimit>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/dataFederation/{tenantName}/limits/{limitName}
+     - Delete One Query Limit For One Federated Database Instance
+   * - *DataFederationApi*
+     - `DownloadFederatedDatabaseQueryLogs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#downloadfederateddatabasequerylogs>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/dataFederation/{tenantName}/queryLogs.gz
+     - Download Query Logs for One Federated Database Instance
+   * - *DataFederationApi*
+     - `GetDataFederationPrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#getdatafederationprivateendpoint>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateNetworkSettings/endpointIds/{endpointId}
+     - Return One Federated Database Instance and Online Archive Private Endpoint in One Project
+   * - *DataFederationApi*
+     - `GetFederatedDatabase <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#getfederateddatabase>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/dataFederation/{tenantName}
+     - Return One Federated Database Instance in One Project
+   * - *DataFederationApi*
+     - `ListDataFederationPrivateEndpoints <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#listdatafederationprivateendpoints>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateNetworkSettings/endpointIds
+     - Return All Federated Database Instance and Online Archive Private Endpoints in One Project
+   * - *DataFederationApi*
+     - `ListFederatedDatabases <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#listfederateddatabases>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/dataFederation
+     - Return All Federated Database Instances in One Project
+   * - *DataFederationApi*
+     - `ReturnFederatedDatabaseQueryLimit <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#returnfederateddatabasequerylimit>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/dataFederation/{tenantName}/limits/{limitName}
+     - Return One Federated Database Instance Query Limit for One Project
+   * - *DataFederationApi*
+     - `ReturnFederatedDatabaseQueryLimits <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#returnfederateddatabasequerylimits>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/dataFederation/{tenantName}/limits
+     - Return All Query Limits for One Federated Database Instance
+   * - *DataFederationApi*
+     - `UpdateFederatedDatabase <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataFederationApi.md#updatefederateddatabase>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/dataFederation/{tenantName}
+     - Update One Federated Database Instance in One Project
+   * - *DataLakePipelinesApi*
+     - `CreatePipeline <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#createpipeline>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/pipelines
+     - Create One Data Lake Pipeline
+   * - *DataLakePipelinesApi*
+     - `DeletePipeline <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#deletepipeline>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}
+     - Remove One Data Lake Pipeline
+   * - *DataLakePipelinesApi*
+     - `DeletePipelineRunDataset <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#deletepipelinerundataset>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}/runs/{pipelineRunId}
+     - Delete Pipeline Run Dataset
+   * - *DataLakePipelinesApi*
+     - `GetPipeline <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#getpipeline>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}
+     - Return One Data Lake Pipeline
+   * - *DataLakePipelinesApi*
+     - `GetPipelineRun <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#getpipelinerun>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}/runs/{pipelineRunId}
+     - Return One Data Lake Pipeline Run
+   * - *DataLakePipelinesApi*
+     - `ListPipelineRuns <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#listpipelineruns>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}/runs
+     - Return All Data Lake Pipeline Runs from One Project
+   * - *DataLakePipelinesApi*
+     - `ListPipelineSchedules <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#listpipelineschedules>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}/availableSchedules
+     - Return Available Ingestion Schedules for One Data Lake Pipeline
+   * - *DataLakePipelinesApi*
+     - `ListPipelineSnapshots <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#listpipelinesnapshots>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}/availableSnapshots
+     - Return Available Backup Snapshots for One Data Lake Pipeline
+   * - *DataLakePipelinesApi*
+     - `ListPipelines <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#listpipelines>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/pipelines
+     - Return All Data Lake Pipelines from One Project
+   * - *DataLakePipelinesApi*
+     - `PausePipeline <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#pausepipeline>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}/pause
+     - Pause One Data Lake Pipeline
+   * - *DataLakePipelinesApi*
+     - `ResumePipeline <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#resumepipeline>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}/resume
+     - Resume One Data Lake Pipeline
+   * - *DataLakePipelinesApi*
+     - `TriggerSnapshotIngestion <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#triggersnapshotingestion>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}/trigger
+     - Trigger on demand snapshot ingestion
+   * - *DataLakePipelinesApi*
+     - `UpdatePipeline <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DataLakePipelinesApi.md#updatepipeline>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/pipelines/{pipelineName}
+     - Update One Data Lake Pipeline
+   * - *DatabaseUsersApi*
+     - `CreateDatabaseUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DatabaseUsersApi.md#createdatabaseuser>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/databaseUsers
+     - Create One Database User in One Project
+   * - *DatabaseUsersApi*
+     - `DeleteDatabaseUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DatabaseUsersApi.md#deletedatabaseuser>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/databaseUsers/{databaseName}/{username}
+     - Remove One Database User from One Project
+   * - *DatabaseUsersApi*
+     - `GetDatabaseUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DatabaseUsersApi.md#getdatabaseuser>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/databaseUsers/{databaseName}/{username}
+     - Return One Database User from One Project
+   * - *DatabaseUsersApi*
+     - `ListDatabaseUsers <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DatabaseUsersApi.md#listdatabaseusers>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/databaseUsers
+     - Return All Database Users from One Project
+   * - *DatabaseUsersApi*
+     - `UpdateDatabaseUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/DatabaseUsersApi.md#updatedatabaseuser>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/databaseUsers/{databaseName}/{username}
+     - Update One Database User in One Project
+   * - *EncryptionAtRestUsingCustomerKeyManagementApi*
+     - `GetEncryptionAtRest <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/EncryptionAtRestUsingCustomerKeyManagementApi.md#getencryptionatrest>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/encryptionAtRest
+     - Return One Configuration for Encryption at Rest using Customer-Managed Keys for One Project
+   * - *EncryptionAtRestUsingCustomerKeyManagementApi*
+     - `UpdateEncryptionAtRest <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/EncryptionAtRestUsingCustomerKeyManagementApi.md#updateencryptionatrest>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/encryptionAtRest
+     - Update Configuration for Encryption at Rest using Customer-Managed Keys for One Project
+   * - *EventsApi*
+     - `GetOrganizationEvent <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/EventsApi.md#getorganizationevent>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/events/{eventId}
+     - Return One Event from One Organization
+   * - *EventsApi*
+     - `GetProjectEvent <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/EventsApi.md#getprojectevent>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/events/{eventId}
+     - Return One Event from One Project
+   * - *EventsApi*
+     - `ListOrganizationEvents <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/EventsApi.md#listorganizationevents>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/events
+     - Return All Events from One Organization
+   * - *EventsApi*
+     - `ListProjectEvents <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/EventsApi.md#listprojectevents>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/events
+     - Return All Events from One Project
+   * - *FederatedAuthenticationApi*
+     - `CreateRoleMapping <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#createrolemapping>`__
+     - **Post** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs/{orgId}/roleMappings
+     - Add One Role Mapping to One Organization
+   * - *FederatedAuthenticationApi*
+     - `DeleteFederationApp <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#deletefederationapp>`__
+     - **Delete** /api/atlas/v2/federationSettings/{federationSettingsId}
+     - Delete the federation settings instance.
+   * - *FederatedAuthenticationApi*
+     - `DeleteRoleMapping <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#deleterolemapping>`__
+     - **Delete** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs/{orgId}/roleMappings/{id}
+     - Remove One Role Mapping from One Organization
+   * - *FederatedAuthenticationApi*
+     - `GetConnectedOrgConfig <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#getconnectedorgconfig>`__
+     - **Get** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs/{orgId}
+     - Return One Org Config Connected to One Federation
+   * - *FederatedAuthenticationApi*
+     - `GetFederationSettings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#getfederationsettings>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/federationSettings
+     - Return Federation Settings for One Organization
+   * - *FederatedAuthenticationApi*
+     - `GetIdentityProvider <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#getidentityprovider>`__
+     - **Get** /api/atlas/v2/federationSettings/{federationSettingsId}/identityProviders/{identityProviderId}
+     - Return one identity provider from the specified federation.
+   * - *FederatedAuthenticationApi*
+     - `GetIdentityProviderMetadata <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#getidentityprovidermetadata>`__
+     - **Get** /api/atlas/v2/federationSettings/{federationSettingsId}/identityProviders/{identityProviderId}/metadata.xml
+     - Return the metadata of one identity provider in the specified federation.
+   * - *FederatedAuthenticationApi*
+     - `GetRoleMapping <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#getrolemapping>`__
+     - **Get** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs/{orgId}/roleMappings/{id}
+     - Return One Role Mapping from One Organization
+   * - *FederatedAuthenticationApi*
+     - `ListConnectedOrgConfigs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#listconnectedorgconfigs>`__
+     - **Get** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs
+     - Return All Connected Org Configs from the Federation
+   * - *FederatedAuthenticationApi*
+     - `ListIdentityProviders <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#listidentityproviders>`__
+     - **Get** /api/atlas/v2/federationSettings/{federationSettingsId}/identityProviders
+     - Return all identity providers from the specified federation.
+   * - *FederatedAuthenticationApi*
+     - `ListRoleMappings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#listrolemappings>`__
+     - **Get** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs/{orgId}/roleMappings
+     - Return All Role Mappings from One Organization
+   * - *FederatedAuthenticationApi*
+     - `RemoveConnectedOrgConfig <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#removeconnectedorgconfig>`__
+     - **Delete** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs/{orgId}
+     - Remove One Org Config Connected to One Federation
+   * - *FederatedAuthenticationApi*
+     - `UpdateConnectedOrgConfig <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#updateconnectedorgconfig>`__
+     - **Patch** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs/{orgId}
+     - Update One Org Config Connected to One Federation
+   * - *FederatedAuthenticationApi*
+     - `UpdateIdentityProvider <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#updateidentityprovider>`__
+     - **Patch** /api/atlas/v2/federationSettings/{federationSettingsId}/identityProviders/{identityProviderId}
+     - Update the identity provider.
+   * - *FederatedAuthenticationApi*
+     - `UpdateRoleMapping <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/FederatedAuthenticationApi.md#updaterolemapping>`__
+     - **Put** /api/atlas/v2/federationSettings/{federationSettingsId}/connectedOrgConfigs/{orgId}/roleMappings/{id}
+     - Update One Role Mapping in One Organization
+   * - *GlobalClustersApi*
+     - `CreateCustomZoneMapping <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/GlobalClustersApi.md#createcustomzonemapping>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/globalWrites/customZoneMapping
+     - Add One Entry to One Custom Zone Mapping
+   * - *GlobalClustersApi*
+     - `CreateManagedNamespace <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/GlobalClustersApi.md#createmanagednamespace>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/globalWrites/managedNamespaces
+     - Create One Managed Namespace in One Global Multi-Cloud Cluster
+   * - *GlobalClustersApi*
+     - `DeleteAllCustomZoneMappings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/GlobalClustersApi.md#deleteallcustomzonemappings>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/globalWrites/customZoneMapping
+     - Remove All Custom Zone Mappings from One Global Multi-Cloud Cluster
+   * - *GlobalClustersApi*
+     - `DeleteManagedNamespace <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/GlobalClustersApi.md#deletemanagednamespace>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/globalWrites/managedNamespaces
+     - Remove One Managed Namespace from One Global Multi-Cloud Cluster
+   * - *GlobalClustersApi*
+     - `GetManagedNamespace <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/GlobalClustersApi.md#getmanagednamespace>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/globalWrites
+     - Return One Managed Namespace in One Global Multi-Cloud Cluster
+   * - *InvoicesApi*
+     - `DownloadInvoiceCSV <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/InvoicesApi.md#downloadinvoicecsv>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/invoices/{invoiceId}/csv
+     - Return One Organization Invoice as CSV
+   * - *InvoicesApi*
+     - `GetInvoice <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/InvoicesApi.md#getinvoice>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/invoices/{invoiceId}
+     - Return One Organization Invoice
+   * - *InvoicesApi*
+     - `ListInvoices <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/InvoicesApi.md#listinvoices>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/invoices
+     - Return All Invoices for One Organization
+   * - *InvoicesApi*
+     - `ListPendingInvoices <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/InvoicesApi.md#listpendinginvoices>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/invoices/pending
+     - Return All Pending Invoices for One Organization
+   * - *LDAPConfigurationApi*
+     - `DeleteLDAPConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LDAPConfigurationApi.md#deleteldapconfiguration>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/userSecurity/ldap/userToDNMapping
+     - Remove the Current LDAP User to DN Mapping
+   * - *LDAPConfigurationApi*
+     - `GetLDAPConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LDAPConfigurationApi.md#getldapconfiguration>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/userSecurity
+     - Return the Current LDAP or X.509 Configuration
+   * - *LDAPConfigurationApi*
+     - `GetLDAPConfigurationStatus <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LDAPConfigurationApi.md#getldapconfigurationstatus>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/userSecurity/ldap/verify/{requestId}
+     - Return the Status of One Verify LDAP Configuration Request
+   * - *LDAPConfigurationApi*
+     - `SaveLDAPConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LDAPConfigurationApi.md#saveldapconfiguration>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/userSecurity
+     - Edit the LDAP or X.509 Configuration
+   * - *LDAPConfigurationApi*
+     - `VerifyLDAPConfiguration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LDAPConfigurationApi.md#verifyldapconfiguration>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/userSecurity/ldap/verify
+     - Verify the LDAP Configuration in One Project
+   * - *LegacyBackupApi*
+     - `DeleteLegacySnapshot <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#deletelegacysnapshot>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/snapshots/{snapshotId}
+     - Remove One Legacy Backup Snapshot
+   * - *LegacyBackupApi*
+     - `GetLegacyBackupCheckpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#getlegacybackupcheckpoint>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backupCheckpoints/{checkpointId}
+     - Return One Legacy Backup Checkpoint
+   * - *LegacyBackupApi*
+     - `GetLegacyBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#getlegacybackuprestorejob>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/restoreJobs/{jobId}
+     - Return One Legacy Backup Restore Job
+   * - *LegacyBackupApi*
+     - `GetLegacySnapshot <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#getlegacysnapshot>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/snapshots/{snapshotId}
+     - Return One Legacy Backup Snapshot
+   * - *LegacyBackupApi*
+     - `GetLegacySnapshotSchedule <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#getlegacysnapshotschedule>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/snapshotSchedule
+     - Return One Snapshot Schedule
+   * - *LegacyBackupApi*
+     - `ListLegacyBackupCheckpoints <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#listlegacybackupcheckpoints>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backupCheckpoints
+     - Return All Legacy Backup Checkpoints
+   * - *LegacyBackupApi*
+     - `ListLegacyBackupRestoreJobs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#listlegacybackuprestorejobs>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/restoreJobs
+     - Return All Legacy Backup Restore Jobs
+   * - *LegacyBackupApi*
+     - `ListLegacySnapshots <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#listlegacysnapshots>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/snapshots
+     - Return All Legacy Backup Snapshots
+   * - *LegacyBackupApi*
+     - `UpdateLegacySnapshotRetention <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#updatelegacysnapshotretention>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/snapshots/{snapshotId}
+     - Change One Legacy Backup Snapshot Expiration
+   * - *LegacyBackupApi*
+     - `UpdateLegacySnapshotSchedule <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupApi.md#updatelegacysnapshotschedule>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/snapshotSchedule
+     - Update Snapshot Schedule for One Cluster
+   * - *LegacyBackupRestoreJobsApi*
+     - `CreateLegacyBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/LegacyBackupRestoreJobsApi.md#createlegacybackuprestorejob>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/restoreJobs
+     - Create One Legacy Backup Restore Job
+   * - *MaintenanceWindowsApi*
+     - `DeferMaintenanceWindow <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MaintenanceWindowsApi.md#defermaintenancewindow>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/maintenanceWindow/defer
+     - Defer One Maintenance Window for One Project
+   * - *MaintenanceWindowsApi*
+     - `GetMaintenanceWindow <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MaintenanceWindowsApi.md#getmaintenancewindow>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/maintenanceWindow
+     - Return One Maintenance Window for One Project
+   * - *MaintenanceWindowsApi*
+     - `ResetMaintenanceWindow <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MaintenanceWindowsApi.md#resetmaintenancewindow>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/maintenanceWindow
+     - Reset One Maintenance Window for One Project
+   * - *MaintenanceWindowsApi*
+     - `ToggleMaintenanceAutoDefer <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MaintenanceWindowsApi.md#togglemaintenanceautodefer>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/maintenanceWindow/autoDefer
+     - Toggle Automatic Deferral of Maintenance for One Project
+   * - *MaintenanceWindowsApi*
+     - `UpdateMaintenanceWindow <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MaintenanceWindowsApi.md#updatemaintenancewindow>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/maintenanceWindow
+     - Update Maintenance Window for One Project
+   * - *MongoDBCloudUsersApi*
+     - `CreateUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MongoDBCloudUsersApi.md#createuser>`__
+     - **Post** /api/atlas/v2/users
+     - Create One MongoDB Cloud User
+   * - *MongoDBCloudUsersApi*
+     - `GetUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MongoDBCloudUsersApi.md#getuser>`__
+     - **Get** /api/atlas/v2/users/{userId}
+     - Return One MongoDB Cloud User using Its ID
+   * - *MongoDBCloudUsersApi*
+     - `GetUserByUsername <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MongoDBCloudUsersApi.md#getuserbyusername>`__
+     - **Get** /api/atlas/v2/users/byName/{userName}
+     - Return One MongoDB Cloud User using Their Username
+   * - *MonitoringAndLogsApi*
+     - `GetAtlasProcess <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#getatlasprocess>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}
+     - Return One MongoDB Process by ID
+   * - *MonitoringAndLogsApi*
+     - `GetDatabase <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#getdatabase>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/databases/{databaseName}
+     - Return One Database for a MongoDB Process
+   * - *MonitoringAndLogsApi*
+     - `GetDatabaseMeasurements <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#getdatabasemeasurements>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/databases/{databaseName}/measurements
+     - Return Measurements of One Database for One MongoDB Process
+   * - *MonitoringAndLogsApi*
+     - `GetDiskMeasurements <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#getdiskmeasurements>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/disks/{partitionName}/measurements
+     - Return Measurements of One Disk for One MongoDB Process
+   * - *MonitoringAndLogsApi*
+     - `GetHostLogs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#gethostlogs>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{hostName}/logs/{logName}.gz
+     - Download Logs for One Multi-Cloud Cluster Host in One Project
+   * - *MonitoringAndLogsApi*
+     - `GetHostMeasurements <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#gethostmeasurements>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/measurements
+     - Return Measurements for One MongoDB Process
+   * - *MonitoringAndLogsApi*
+     - `GetIndexMetrics <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#getindexmetrics>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/hosts/{processId}/fts/metrics/indexes/{databaseName}/{collectionName}/{indexName}/measurements
+     - Return Atlas Search Metrics for One Index in One Specified Namespace
+   * - *MonitoringAndLogsApi*
+     - `GetMeasurements <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#getmeasurements>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/hosts/{processId}/fts/metrics/measurements
+     - Return Atlas Search Hardware and Status Metrics
+   * - *MonitoringAndLogsApi*
+     - `ListAtlasProcesses <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#listatlasprocesses>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes
+     - Return All MongoDB Processes in One Project
+   * - *MonitoringAndLogsApi*
+     - `ListDatabases <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#listdatabases>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/databases
+     - Return Available Databases for One MongoDB Process
+   * - *MonitoringAndLogsApi*
+     - `ListDiskMeasurements <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#listdiskmeasurements>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/disks/{partitionName}
+     - Return Measurements of One Disk
+   * - *MonitoringAndLogsApi*
+     - `ListDiskPartitions <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#listdiskpartitions>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/disks
+     - Return Available Disks for One MongoDB Process
+   * - *MonitoringAndLogsApi*
+     - `ListIndexMetrics <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#listindexmetrics>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/hosts/{processId}/fts/metrics/indexes/{databaseName}/{collectionName}/measurements
+     - Return All Atlas Search Index Metrics for One Namespace
+   * - *MonitoringAndLogsApi*
+     - `ListMetricTypes <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MonitoringAndLogsApi.md#listmetrictypes>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/hosts/{processId}/fts/metrics
+     - Return All Atlas Search Metric Types for One Process
+   * - *MultiCloudClustersApi*
+     - `CreateCluster <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MultiCloudClustersApi.md#createcluster>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters
+     - Create One Multi-Cloud Cluster from One Project
+   * - *MultiCloudClustersApi*
+     - `DeleteCluster <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MultiCloudClustersApi.md#deletecluster>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}
+     - Remove One Multi-Cloud Cluster from One Project
+   * - *MultiCloudClustersApi*
+     - `GetCluster <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MultiCloudClustersApi.md#getcluster>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}
+     - Return One Multi-Cloud Cluster from One Project
+   * - *MultiCloudClustersApi*
+     - `ListClusters <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MultiCloudClustersApi.md#listclusters>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters
+     - Return All Multi-Cloud Clusters from One Project
+   * - *MultiCloudClustersApi*
+     - `TestFailover <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MultiCloudClustersApi.md#testfailover>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/restartPrimaries
+     - Test Failover for One Multi-Cloud Cluster
+   * - *MultiCloudClustersApi*
+     - `UpdateCluster <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/MultiCloudClustersApi.md#updatecluster>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}
+     - Modify One Multi-Cloud Cluster from One Project
+   * - *NetworkPeeringApi*
+     - `CreatePeeringConnection <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#createpeeringconnection>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/peers
+     - Create One New Network Peering Connection
+   * - *NetworkPeeringApi*
+     - `CreatePeeringContainer <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#createpeeringcontainer>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/containers
+     - Create One New Network Peering Container
+   * - *NetworkPeeringApi*
+     - `DeletePeeringConnection <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#deletepeeringconnection>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/peers/{peerId}
+     - Remove One Existing Network Peering Connection
+   * - *NetworkPeeringApi*
+     - `DeletePeeringContainer <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#deletepeeringcontainer>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/containers/{containerId}
+     - Remove One Network Peering Container
+   * - *NetworkPeeringApi*
+     - `DisablePeering <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#disablepeering>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/privateIpMode
+     - Disable Connect via Peering Only Mode for One Project
+   * - *NetworkPeeringApi*
+     - `GetPeeringConnection <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#getpeeringconnection>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/peers/{peerId}
+     - Return One Network Peering Connection in One Project
+   * - *NetworkPeeringApi*
+     - `GetPeeringContainer <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#getpeeringcontainer>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/containers/{containerId}
+     - Return One Network Peering Container
+   * - *NetworkPeeringApi*
+     - `ListPeeringConnections <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#listpeeringconnections>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/peers
+     - Return All Network Peering Connections in One Project
+   * - *NetworkPeeringApi*
+     - `ListPeeringContainerByCloudProvider <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#listpeeringcontainerbycloudprovider>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/containers
+     - Return All Network Peering Containers in One Project for One Cloud Provider
+   * - *NetworkPeeringApi*
+     - `ListPeeringContainers <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#listpeeringcontainers>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/containers/all
+     - Return All Network Peering Containers in One Project
+   * - *NetworkPeeringApi*
+     - `UpdatePeeringConnection <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#updatepeeringconnection>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/peers/{peerId}
+     - Update One New Network Peering Connection
+   * - *NetworkPeeringApi*
+     - `UpdatePeeringContainer <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#updatepeeringcontainer>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/containers/{containerId}
+     - Update One Network Peering Container
+   * - *NetworkPeeringApi*
+     - `VerifyConnectViaPeeringOnlyModeForOneProject <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/NetworkPeeringApi.md#verifyconnectviapeeringonlymodeforoneproject>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateIpMode
+     - Verify Connect via Peering Only Mode for One Project
+   * - *OnlineArchiveApi*
+     - `CreateOnlineArchive <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OnlineArchiveApi.md#createonlinearchive>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/onlineArchives
+     - Create One Online Archive
+   * - *OnlineArchiveApi*
+     - `DeleteOnlineArchive <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OnlineArchiveApi.md#deleteonlinearchive>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/onlineArchives/{archiveId}
+     - Remove One Online Archive
+   * - *OnlineArchiveApi*
+     - `DownloadOnlineArchiveQueryLogs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OnlineArchiveApi.md#downloadonlinearchivequerylogs>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/onlineArchives/queryLogs.gz
+     - Download Online Archive Query Logs
+   * - *OnlineArchiveApi*
+     - `GetOnlineArchive <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OnlineArchiveApi.md#getonlinearchive>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/onlineArchives/{archiveId}
+     - Return One Online Archive
+   * - *OnlineArchiveApi*
+     - `ListOnlineArchives <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OnlineArchiveApi.md#listonlinearchives>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/onlineArchives
+     - Return All Online Archives for One Cluster
+   * - *OnlineArchiveApi*
+     - `UpdateOnlineArchive <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OnlineArchiveApi.md#updateonlinearchive>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/onlineArchives/{archiveId}
+     - Update One Online Archive
+   * - *OrganizationsApi*
+     - `CreateOrganization <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#createorganization>`__
+     - **Post** /api/atlas/v2/orgs
+     - Create One Organization
+   * - *OrganizationsApi*
+     - `CreateOrganizationInvitation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#createorganizationinvitation>`__
+     - **Post** /api/atlas/v2/orgs/{orgId}/invites
+     - Invite One MongoDB Cloud User to Join One Atlas Organization
+   * - *OrganizationsApi*
+     - `DeleteOrganization <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#deleteorganization>`__
+     - **Delete** /api/atlas/v2/orgs/{orgId}
+     - Remove One Organization
+   * - *OrganizationsApi*
+     - `DeleteOrganizationInvitation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#deleteorganizationinvitation>`__
+     - **Delete** /api/atlas/v2/orgs/{orgId}/invites/{invitationId}
+     - Cancel One Organization Invitation
+   * - *OrganizationsApi*
+     - `GetOrganization <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#getorganization>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}
+     - Return One Organization
+   * - *OrganizationsApi*
+     - `GetOrganizationInvitation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#getorganizationinvitation>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/invites/{invitationId}
+     - Return One Organization Invitation
+   * - *OrganizationsApi*
+     - `GetOrganizationSettings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#getorganizationsettings>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/settings
+     - Return Settings for One Organization
+   * - *OrganizationsApi*
+     - `ListOrganizationInvitations <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#listorganizationinvitations>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/invites
+     - Return All Organization Invitations
+   * - *OrganizationsApi*
+     - `ListOrganizationProjects <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#listorganizationprojects>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/groups
+     - Return One or More Projects in One Organization
+   * - *OrganizationsApi*
+     - `ListOrganizationUsers <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#listorganizationusers>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/users
+     - Return All MongoDB Cloud Users in One Organization
+   * - *OrganizationsApi*
+     - `ListOrganizations <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#listorganizations>`__
+     - **Get** /api/atlas/v2/orgs
+     - Return All Organizations
+   * - *OrganizationsApi*
+     - `RenameOrganization <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#renameorganization>`__
+     - **Patch** /api/atlas/v2/orgs/{orgId}
+     - Rename One Organization
+   * - *OrganizationsApi*
+     - `UpdateOrganizationInvitation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#updateorganizationinvitation>`__
+     - **Patch** /api/atlas/v2/orgs/{orgId}/invites
+     - Update One Organization Invitation
+   * - *OrganizationsApi*
+     - `UpdateOrganizationInvitationById <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#updateorganizationinvitationbyid>`__
+     - **Patch** /api/atlas/v2/orgs/{orgId}/invites/{invitationId}
+     - Update One Organization Invitation by Invitation ID
+   * - *OrganizationsApi*
+     - `UpdateOrganizationSettings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/OrganizationsApi.md#updateorganizationsettings>`__
+     - **Patch** /api/atlas/v2/orgs/{orgId}/settings
+     - Update Settings for One Organization
+   * - *PerformanceAdvisorApi*
+     - `DisableSlowOperationThresholding <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PerformanceAdvisorApi.md#disableslowoperationthresholding>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/managedSlowMs/disable
+     - Disable Managed Slow Operation Threshold
+   * - *PerformanceAdvisorApi*
+     - `EnableSlowOperationThresholding <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PerformanceAdvisorApi.md#enableslowoperationthresholding>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/managedSlowMs/enable
+     - Enable Managed Slow Operation Threshold
+   * - *PerformanceAdvisorApi*
+     - `ListSlowQueries <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PerformanceAdvisorApi.md#listslowqueries>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/performanceAdvisor/slowQueryLogs
+     - Return Slow Queries
+   * - *PerformanceAdvisorApi*
+     - `ListSlowQueryNamespaces <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PerformanceAdvisorApi.md#listslowquerynamespaces>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/performanceAdvisor/namespaces
+     - Return All Namespaces for One Host
+   * - *PerformanceAdvisorApi*
+     - `ListSuggestedIndexes <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PerformanceAdvisorApi.md#listsuggestedindexes>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/processes/{processId}/performanceAdvisor/suggestedIndexes
+     - Return Suggested Indexes
+   * - *PrivateEndpointServicesApi*
+     - `CreatePrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#createprivateendpoint>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/privateEndpoint/{cloudProvider}/endpointService/{endpointServiceId}/endpoint
+     - Create One Private Endpoint for One Provider
+   * - *PrivateEndpointServicesApi*
+     - `CreatePrivateEndpointService <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#createprivateendpointservice>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/privateEndpoint/endpointService
+     - Create One Private Endpoint Service for One Provider
+   * - *PrivateEndpointServicesApi*
+     - `DeletePrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#deleteprivateendpoint>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/privateEndpoint/{cloudProvider}/endpointService/{endpointServiceId}/endpoint/{endpointId}
+     - Remove One Private Endpoint for One Provider
+   * - *PrivateEndpointServicesApi*
+     - `DeletePrivateEndpointService <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#deleteprivateendpointservice>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/privateEndpoint/{cloudProvider}/endpointService/{endpointServiceId}
+     - Remove One Private Endpoint Service for One Provider
+   * - *PrivateEndpointServicesApi*
+     - `GetPrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#getprivateendpoint>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateEndpoint/{cloudProvider}/endpointService/{endpointServiceId}/endpoint/{endpointId}
+     - Return One Private Endpoint for One Provider
+   * - *PrivateEndpointServicesApi*
+     - `GetPrivateEndpointService <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#getprivateendpointservice>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateEndpoint/{cloudProvider}/endpointService/{endpointServiceId}
+     - Return One Private Endpoint Service for One Provider
+   * - *PrivateEndpointServicesApi*
+     - `GetRegionalizedPrivateEndpointSetting <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#getregionalizedprivateendpointsetting>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateEndpoint/regionalMode
+     - Return Regionalized Private Endpoint Status
+   * - *PrivateEndpointServicesApi*
+     - `ListPrivateEndpointServices <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#listprivateendpointservices>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateEndpoint/{cloudProvider}/endpointService
+     - Return All Private Endpoint Services for One Provider
+   * - *PrivateEndpointServicesApi*
+     - `ToggleRegionalizedPrivateEndpointSetting <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/PrivateEndpointServicesApi.md#toggleregionalizedprivateendpointsetting>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/privateEndpoint/regionalMode
+     - Toggle Regionalized Private Endpoint Status
+   * - *ProgrammaticAPIKeysApi*
+     - `AddProjectApiKey <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#addprojectapikey>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/apiKeys/{apiUserId}
+     - Assign One Organization API Key to One Project
+   * - *ProgrammaticAPIKeysApi*
+     - `CreateApiKey <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#createapikey>`__
+     - **Post** /api/atlas/v2/orgs/{orgId}/apiKeys
+     - Create One Organization API Key
+   * - *ProgrammaticAPIKeysApi*
+     - `CreateApiKeyAccessList <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#createapikeyaccesslist>`__
+     - **Post** /api/atlas/v2/orgs/{orgId}/apiKeys/{apiUserId}/accessList
+     - Create Access List Entries for One Organization API Key
+   * - *ProgrammaticAPIKeysApi*
+     - `CreateProjectApiKey <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#createprojectapikey>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/apiKeys
+     - Create and Assign One Organization API Key to One Project
+   * - *ProgrammaticAPIKeysApi*
+     - `DeleteApiKey <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#deleteapikey>`__
+     - **Delete** /api/atlas/v2/orgs/{orgId}/apiKeys/{apiUserId}
+     - Remove One Organization API Key
+   * - *ProgrammaticAPIKeysApi*
+     - `DeleteApiKeyAccessListEntry <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#deleteapikeyaccesslistentry>`__
+     - **Delete** /api/atlas/v2/orgs/{orgId}/apiKeys/{apiUserId}/accessList/{ipAddress}
+     - Remove One Access List Entry for One Organization API Key
+   * - *ProgrammaticAPIKeysApi*
+     - `GetApiKey <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#getapikey>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/apiKeys/{apiUserId}
+     - Return One Organization API Key
+   * - *ProgrammaticAPIKeysApi*
+     - `GetApiKeyAccessList <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#getapikeyaccesslist>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/apiKeys/{apiUserId}/accessList/{ipAddress}
+     - Return One Access List Entry for One Organization API Key
+   * - *ProgrammaticAPIKeysApi*
+     - `ListApiKeyAccessListsEntries <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#listapikeyaccesslistsentries>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/apiKeys/{apiUserId}/accessList
+     - Return All Access List Entries for One Organization API Key
+   * - *ProgrammaticAPIKeysApi*
+     - `ListApiKeys <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#listapikeys>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/apiKeys
+     - Return All Organization API Keys
+   * - *ProgrammaticAPIKeysApi*
+     - `ListProjectApiKeys <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#listprojectapikeys>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/apiKeys
+     - Return All Organization API Keys Assigned to One Project
+   * - *ProgrammaticAPIKeysApi*
+     - `RemoveProjectApiKey <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#removeprojectapikey>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/apiKeys/{apiUserId}
+     - Unassign One Organization API Key from One Project
+   * - *ProgrammaticAPIKeysApi*
+     - `UpdateApiKey <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#updateapikey>`__
+     - **Patch** /api/atlas/v2/orgs/{orgId}/apiKeys/{apiUserId}
+     - Update One Organization API Key
+   * - *ProgrammaticAPIKeysApi*
+     - `UpdateApiKeyRoles <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProgrammaticAPIKeysApi.md#updateapikeyroles>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/apiKeys/{apiUserId}
+     - Update Roles of One Organization API Key to One Project
+   * - *ProjectIPAccessListApi*
+     - `CreateProjectIpAccessList <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectIPAccessListApi.md#createprojectipaccesslist>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/accessList
+     - Add Entries to Project IP Access List
+   * - *ProjectIPAccessListApi*
+     - `DeleteProjectIpAccessList <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectIPAccessListApi.md#deleteprojectipaccesslist>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/accessList/{entryValue}
+     - Remove One Entry from One Project IP Access List
+   * - *ProjectIPAccessListApi*
+     - `GetProjectIpAccessListStatus <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectIPAccessListApi.md#getprojectipaccessliststatus>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/accessList/{entryValue}/status
+     - Return Status of One Project IP Access List Entry
+   * - *ProjectIPAccessListApi*
+     - `GetProjectIpList <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectIPAccessListApi.md#getprojectiplist>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/accessList/{entryValue}
+     - Return One Project IP Access List Entry
+   * - *ProjectIPAccessListApi*
+     - `ListProjectIpAccessLists <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectIPAccessListApi.md#listprojectipaccesslists>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/accessList
+     - Return Project IP Access List
+   * - *ProjectsApi*
+     - `CreateProject <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#createproject>`__
+     - **Post** /api/atlas/v2/groups
+     - Create One Project
+   * - *ProjectsApi*
+     - `CreateProjectInvitation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#createprojectinvitation>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/invites
+     - Invite One MongoDB Cloud User to Join One Project
+   * - *ProjectsApi*
+     - `DeleteProject <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#deleteproject>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}
+     - Remove One Project
+   * - *ProjectsApi*
+     - `DeleteProjectInvitation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#deleteprojectinvitation>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/invites/{invitationId}
+     - Cancel One Project Invitation
+   * - *ProjectsApi*
+     - `DeleteProjectLimit <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#deleteprojectlimit>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/limits/{limitName}
+     - Remove One Project Limit
+   * - *ProjectsApi*
+     - `GetProject <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#getproject>`__
+     - **Get** /api/atlas/v2/groups/{groupId}
+     - Return One Project
+   * - *ProjectsApi*
+     - `GetProjectByName <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#getprojectbyname>`__
+     - **Get** /api/atlas/v2/groups/byName/{groupName}
+     - Return One Project using Its Name
+   * - *ProjectsApi*
+     - `GetProjectInvitation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#getprojectinvitation>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/invites/{invitationId}
+     - Return One Project Invitation
+   * - *ProjectsApi*
+     - `GetProjectLimit <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#getprojectlimit>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/limits/{limitName}
+     - Return One Limit for One Project
+   * - *ProjectsApi*
+     - `GetProjectSettings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#getprojectsettings>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/settings
+     - Return One Project Settings
+   * - *ProjectsApi*
+     - `ListProjectInvitations <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#listprojectinvitations>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/invites
+     - Return All Project Invitations
+   * - *ProjectsApi*
+     - `ListProjectLimits <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#listprojectlimits>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/limits
+     - Return All Limits for One Project
+   * - *ProjectsApi*
+     - `ListProjectUsers <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#listprojectusers>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/users
+     - Return All Users in One Project
+   * - *ProjectsApi*
+     - `ListProjects <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#listprojects>`__
+     - **Get** /api/atlas/v2/groups
+     - Return All Projects
+   * - *ProjectsApi*
+     - `RemoveProjectUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#removeprojectuser>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/users/{userId}
+     - Remove One User from One Project
+   * - *ProjectsApi*
+     - `SetProjectLimit <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#setprojectlimit>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/limits/{limitName}
+     - Set One Project Limit
+   * - *ProjectsApi*
+     - `UpdateProject <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#updateproject>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}
+     - Update One Project Name
+   * - *ProjectsApi*
+     - `UpdateProjectInvitation <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#updateprojectinvitation>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/invites
+     - Update One Project Invitation
+   * - *ProjectsApi*
+     - `UpdateProjectInvitationById <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#updateprojectinvitationbyid>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/invites/{invitationId}
+     - Update One Project Invitation by Invitation ID
+   * - *ProjectsApi*
+     - `UpdateProjectSettings <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ProjectsApi.md#updateprojectsettings>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/settings
+     - Update One Project Settings
+   * - *RollingIndexApi*
+     - `CreateRollingIndex <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/RollingIndexApi.md#createrollingindex>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/index
+     - Create One Rolling Index
+   * - *RootApi*
+     - `GetSystemStatus <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/RootApi.md#getsystemstatus>`__
+     - **Get** /api/atlas/v2
+     - Return the status of this MongoDB application
+   * - *ServerlessInstancesApi*
+     - `CreateServerlessInstance <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessInstancesApi.md#createserverlessinstance>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/serverless
+     - Create One Serverless Instance in One Project
+   * - *ServerlessInstancesApi*
+     - `DeleteServerlessInstance <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessInstancesApi.md#deleteserverlessinstance>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/serverless/{name}
+     - Remove One Serverless Instance from One Project
+   * - *ServerlessInstancesApi*
+     - `GetServerlessInstance <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessInstancesApi.md#getserverlessinstance>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/serverless/{name}
+     - Return One Serverless Instance from One Project
+   * - *ServerlessInstancesApi*
+     - `ListServerlessInstances <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessInstancesApi.md#listserverlessinstances>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/serverless
+     - Return All Serverless Instances from One Project
+   * - *ServerlessInstancesApi*
+     - `UpdateServerlessInstance <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessInstancesApi.md#updateserverlessinstance>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/serverless/{name}
+     - Update One Serverless Instance in One Project
+   * - *ServerlessPrivateEndpointsApi*
+     - `CreateServerlessPrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessPrivateEndpointsApi.md#createserverlessprivateendpoint>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/privateEndpoint/serverless/instance/{instanceName}/endpoint
+     - Create One Private Endpoint for One Serverless Instance
+   * - *ServerlessPrivateEndpointsApi*
+     - `DeleteServerlessPrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessPrivateEndpointsApi.md#deleteserverlessprivateendpoint>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/privateEndpoint/serverless/instance/{instanceName}/endpoint/{endpointId}
+     - Remove One Private Endpoint for One Serverless Instance
+   * - *ServerlessPrivateEndpointsApi*
+     - `GetServerlessPrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessPrivateEndpointsApi.md#getserverlessprivateendpoint>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateEndpoint/serverless/instance/{instanceName}/endpoint/{endpointId}
+     - Return One Private Endpoint for One Serverless Instance
+   * - *ServerlessPrivateEndpointsApi*
+     - `ListServerlessPrivateEndpoints <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessPrivateEndpointsApi.md#listserverlessprivateendpoints>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/privateEndpoint/serverless/instance/{instanceName}/endpoint
+     - Return All Private Endpoints for One Serverless Instance
+   * - *ServerlessPrivateEndpointsApi*
+     - `UpdateServerlessPrivateEndpoint <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ServerlessPrivateEndpointsApi.md#updateserverlessprivateendpoint>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/privateEndpoint/serverless/instance/{instanceName}/endpoint/{endpointId}
+     - Update One Private Endpoint for One Serverless Instance
+   * - *SharedTierRestoreJobsApi*
+     - `CreateSharedClusterBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/SharedTierRestoreJobsApi.md#createsharedclusterbackuprestorejob>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/tenant/restore
+     - Create One Restore Job from One M2 or M5 Cluster
+   * - *SharedTierRestoreJobsApi*
+     - `GetSharedClusterBackupRestoreJob <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/SharedTierRestoreJobsApi.md#getsharedclusterbackuprestorejob>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/tenant/restores/{restoreId}
+     - Return One Restore Job for One M2 or M5 Cluster
+   * - *SharedTierRestoreJobsApi*
+     - `ListSharedClusterBackupRestoreJobs <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/SharedTierRestoreJobsApi.md#listsharedclusterbackuprestorejobs>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/tenant/restores
+     - Return All Restore Jobs for One M2 or M5 Cluster
+   * - *SharedTierSnapshotsApi*
+     - `DownloadSharedClusterBackup <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/SharedTierSnapshotsApi.md#downloadsharedclusterbackup>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/tenant/download
+     - Download One M2 or M5 Cluster Snapshot
+   * - *SharedTierSnapshotsApi*
+     - `GetSharedClusterBackup <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/SharedTierSnapshotsApi.md#getsharedclusterbackup>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/tenant/snapshots/{snapshotId}
+     - Return One Snapshot for One M2 or M5 Cluster
+   * - *SharedTierSnapshotsApi*
+     - `ListSharedClusterBackups <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/SharedTierSnapshotsApi.md#listsharedclusterbackups>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/clusters/{clusterName}/backup/tenant/snapshots
+     - Return All Snapshots for One M2 or M5 Cluster
+   * - *TeamsApi*
+     - `AddAllTeamsToProject <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#addallteamstoproject>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/teams
+     - Add One or More Teams to One Project
+   * - *TeamsApi*
+     - `AddTeamUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#addteamuser>`__
+     - **Post** /api/atlas/v2/orgs/{orgId}/teams/{teamId}/users
+     - Assign MongoDB Cloud Users from One Organization to One Team
+   * - *TeamsApi*
+     - `CreateTeam <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#createteam>`__
+     - **Post** /api/atlas/v2/orgs/{orgId}/teams
+     - Create One Team in One Organization
+   * - *TeamsApi*
+     - `DeleteTeam <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#deleteteam>`__
+     - **Delete** /api/atlas/v2/orgs/{orgId}/teams/{teamId}
+     - Remove One Team from One Organization
+   * - *TeamsApi*
+     - `GetTeamById <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#getteambyid>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/teams/{teamId}
+     - Return One Team using its ID
+   * - *TeamsApi*
+     - `GetTeamByName <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#getteambyname>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/teams/byName/{teamName}
+     - Return One Team using its Name
+   * - *TeamsApi*
+     - `ListOrganizationTeams <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#listorganizationteams>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/teams
+     - Return All Teams in One Organization
+   * - *TeamsApi*
+     - `ListProjectTeams <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#listprojectteams>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/teams
+     - Return All Teams in One Project
+   * - *TeamsApi*
+     - `ListTeamUsers <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#listteamusers>`__
+     - **Get** /api/atlas/v2/orgs/{orgId}/teams/{teamId}/users
+     - Return All MongoDB Cloud Users Assigned to One Team
+   * - *TeamsApi*
+     - `RemoveProjectTeam <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#removeprojectteam>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/teams/{teamId}
+     - Remove One Team from One Project
+   * - *TeamsApi*
+     - `RemoveTeamUser <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#removeteamuser>`__
+     - **Delete** /api/atlas/v2/orgs/{orgId}/teams/{teamId}/users/{userId}
+     - Remove One MongoDB Cloud User from One Team
+   * - *TeamsApi*
+     - `RenameTeam <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#renameteam>`__
+     - **Patch** /api/atlas/v2/orgs/{orgId}/teams/{teamId}
+     - Rename One Team
+   * - *TeamsApi*
+     - `UpdateTeamRoles <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TeamsApi.md#updateteamroles>`__
+     - **Patch** /api/atlas/v2/groups/{groupId}/teams/{teamId}
+     - Update Team Roles in One Project
+   * - *TestApi*
+     - `VersionedExample <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/TestApi.md#versionedexample>`__
+     - **Get** /api/atlas/v2/example/info
+     - Example resource info for versioning of the Atlas API
+   * - *ThirdPartyIntegrationsApi*
+     - `CreateThirdPartyIntegration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ThirdPartyIntegrationsApi.md#createthirdpartyintegration>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/integrations/{integrationType}
+     - Configure One Third-Party Service Integration
+   * - *ThirdPartyIntegrationsApi*
+     - `DeleteThirdPartyIntegration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ThirdPartyIntegrationsApi.md#deletethirdpartyintegration>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/integrations/{integrationType}
+     - Remove One Third-Party Service Integration
+   * - *ThirdPartyIntegrationsApi*
+     - `GetThirdPartyIntegration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ThirdPartyIntegrationsApi.md#getthirdpartyintegration>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/integrations/{integrationType}
+     - Return One Third-Party Service Integration
+   * - *ThirdPartyIntegrationsApi*
+     - `ListThirdPartyIntegrations <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ThirdPartyIntegrationsApi.md#listthirdpartyintegrations>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/integrations
+     - Return All Active Third-Party Service Integrations
+   * - *ThirdPartyIntegrationsApi*
+     - `UpdateThirdPartyIntegration <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/ThirdPartyIntegrationsApi.md#updatethirdpartyintegration>`__
+     - **Put** /api/atlas/v2/groups/{groupId}/integrations/{integrationType}
+     - Update One Third-Party Service Integration
+   * - *X509AuthenticationApi*
+     - `CreateDatabaseUserCertificate <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/X509AuthenticationApi.md#createdatabaseusercertificate>`__
+     - **Post** /api/atlas/v2/groups/{groupId}/databaseUsers/{username}/certs
+     - Create One X.509 Certificate for One MongoDB User
+   * - *X509AuthenticationApi*
+     - `DisableCustomerManagedX509 <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/X509AuthenticationApi.md#disablecustomermanagedx509>`__
+     - **Delete** /api/atlas/v2/groups/{groupId}/userSecurity/customerX509
+     - Disable Customer-Managed X.509
+   * - *X509AuthenticationApi*
+     - `ListDatabaseUserCertificates <https://github.com/mongodb/atlas-sdk-go/blob/main/docs/docs/X509AuthenticationApi.md#listdatabaseusercertificates>`__
+     - **Get** /api/atlas/v2/groups/{groupId}/databaseUsers/{username}/certs
+     - Return All X.509 Certificates Assigned to One MongoDB User
+
+
+Documentation For Models
+------------------------
+
+
+* `AWSAutoScaling <docs/AWSAutoScaling.md>`__
+* `AWSCloudProviderContainer <docs/AWSCloudProviderContainer.md>`__
+* `AWSComputeAutoScaling <docs/AWSComputeAutoScaling.md>`__
+* `AWSCustomDNSEnabled <docs/AWSCustomDNSEnabled.md>`__
+* `AWSInterfaceEndpoint <docs/AWSInterfaceEndpoint.md>`__
+* `AWSKMS <docs/AWSKMS.md>`__
+* `AWSPeerVpc <docs/AWSPeerVpc.md>`__
+* `AWSPrivateLinkConnection <docs/AWSPrivateLinkConnection.md>`__
+* `AWSProviderSettings <docs/AWSProviderSettings.md>`__
+* `AWSRegionConfig <docs/AWSRegionConfig.md>`__
+* `AccessListItem <docs/AccessListItem.md>`__
+* `AddUserToTeam <docs/AddUserToTeam.md>`__
+* `AlertConfigViewForNdsGroup <docs/AlertConfigViewForNdsGroup.md>`__
+* `AlertViewForNdsGroup <docs/AlertViewForNdsGroup.md>`__
+* `ApiUser <docs/ApiUser.md>`__
+* `AppUser <docs/AppUser.md>`__
+* `AuditLog <docs/AuditLog.md>`__
+* `AutoExportPolicy <docs/AutoExportPolicy.md>`__
+* `AutoScaling <docs/AutoScaling.md>`__
+* `AutoScalingV15 <docs/AutoScalingV15.md>`__
+* `AvailableDeployment <docs/AvailableDeployment.md>`__
+* `AvailableProject <docs/AvailableProject.md>`__
+* `AvailableRegion <docs/AvailableRegion.md>`__
+* `AzureAutoScaling <docs/AzureAutoScaling.md>`__
+* `AzureCloudProviderContainer <docs/AzureCloudProviderContainer.md>`__
+* `AzureComputeAutoScaling <docs/AzureComputeAutoScaling.md>`__
+* `AzureKeyVault <docs/AzureKeyVault.md>`__
+* `AzurePeerNetwork <docs/AzurePeerNetwork.md>`__
+* `AzurePrivateEndpoint <docs/AzurePrivateEndpoint.md>`__
+* `AzurePrivateLinkConnection <docs/AzurePrivateLinkConnection.md>`__
+* `AzureProviderSettings <docs/AzureProviderSettings.md>`__
+* `AzureRegionConfig <docs/AzureRegionConfig.md>`__
+* `BSONTimestamp <docs/BSONTimestamp.md>`__
+* `BiConnector <docs/BiConnector.md>`__
+* `CharFilterhtmlStrip <docs/CharFilterhtmlStrip.md>`__
+* `CharFiltericuNormalize <docs/CharFiltericuNormalize.md>`__
+* `CharFiltermapping <docs/CharFiltermapping.md>`__
+* `CharFiltermappingMappings <docs/CharFiltermappingMappings.md>`__
+* `CharFilterpersian <docs/CharFilterpersian.md>`__
+* `Checkpoint <docs/Checkpoint.md>`__
+* `CheckpointPart <docs/CheckpointPart.md>`__
+* `CloudProviderAccess <docs/CloudProviderAccess.md>`__
+* `CloudProviderAccessAWSIAMRole <docs/CloudProviderAccessAWSIAMRole.md>`__
+* `CloudProviderAccessAzureServicePrincipal <docs/CloudProviderAccessAzureServicePrincipal.md>`__
+* `CloudProviderAccessDataLakeFeatureUsage <docs/CloudProviderAccessDataLakeFeatureUsage.md>`__
+* `CloudProviderAccessEncryptionAtRestFeatureUsage <docs/CloudProviderAccessEncryptionAtRestFeatureUsage.md>`__
+* `CloudProviderAccessExportSnapshotFeatureUsage <docs/CloudProviderAccessExportSnapshotFeatureUsage.md>`__
+* `CloudProviderAccessFeatureUsage <docs/CloudProviderAccessFeatureUsage.md>`__
+* `CloudProviderAccessFeatureUsageDataLakeFeatureId <docs/CloudProviderAccessFeatureUsageDataLakeFeatureId.md>`__
+* `CloudProviderAccessFeatureUsageExportSnapshotFeatureId <docs/CloudProviderAccessFeatureUsageExportSnapshotFeatureId.md>`__
+* `CloudProviderAccessRole <docs/CloudProviderAccessRole.md>`__
+* `CloudProviderContainer <docs/CloudProviderContainer.md>`__
+* `Cluster <docs/Cluster.md>`__
+* `ClusterDescriptionConnectionStrings <docs/ClusterDescriptionConnectionStrings.md>`__
+* `ClusterDescriptionConnectionStringsPrivateEndpoint <docs/ClusterDescriptionConnectionStringsPrivateEndpoint.md>`__
+* `ClusterDescriptionConnectionStringsPrivateEndpointEndpoint <docs/ClusterDescriptionConnectionStringsPrivateEndpointEndpoint.md>`__
+* `ClusterDescriptionProcessArgs <docs/ClusterDescriptionProcessArgs.md>`__
+* `ClusterDescriptionV15 <docs/ClusterDescriptionV15.md>`__
+* `ClusterOutageSimulation <docs/ClusterOutageSimulation.md>`__
+* `ClusterOutageSimulationOutageFilter <docs/ClusterOutageSimulationOutageFilter.md>`__
+* `ClusterProviderSettings <docs/ClusterProviderSettings.md>`__
+* `ClusterStatus <docs/ClusterStatus.md>`__
+* `Collation <docs/Collation.md>`__
+* `ComputeAutoScaling <docs/ComputeAutoScaling.md>`__
+* `ComputeAutoScalingV15 <docs/ComputeAutoScalingV15.md>`__
+* `ConnectedOrgConfig <docs/ConnectedOrgConfig.md>`__
+* `ContainerPeer <docs/ContainerPeer.md>`__
+* `CreateAWSEndpointRequest <docs/CreateAWSEndpointRequest.md>`__
+* `CreateApiKey <docs/CreateApiKey.md>`__
+* `CreateAzureEndpointRequest <docs/CreateAzureEndpointRequest.md>`__
+* `CreateEndpointRequest <docs/CreateEndpointRequest.md>`__
+* `CreateEndpointServiceRequest <docs/CreateEndpointServiceRequest.md>`__
+* `CreateGCPEndpointGroupRequest <docs/CreateGCPEndpointGroupRequest.md>`__
+* `CreateGCPForwardingRuleRequest <docs/CreateGCPForwardingRuleRequest.md>`__
+* `CreateOrganizationRequest <docs/CreateOrganizationRequest.md>`__
+* `CreateOrganizationResponse <docs/CreateOrganizationResponse.md>`__
+* `Criteria <docs/Criteria.md>`__
+* `CustomCriteria <docs/CustomCriteria.md>`__
+* `CustomDBRole <docs/CustomDBRole.md>`__
+* `CustomerX509 <docs/CustomerX509.md>`__
+* `DBAction <docs/DBAction.md>`__
+* `DBResource <docs/DBResource.md>`__
+* `DLSIngestionSink <docs/DLSIngestionSink.md>`__
+* `DailySchedule <docs/DailySchedule.md>`__
+* `DataFederationQueryLimit <docs/DataFederationQueryLimit.md>`__
+* `DataFederationTenantQueryLimit <docs/DataFederationTenantQueryLimit.md>`__
+* `DataLakeAWSCloudProviderConfig <docs/DataLakeAWSCloudProviderConfig.md>`__
+* `DataLakeAtlasStore <docs/DataLakeAtlasStore.md>`__
+* `DataLakeAtlasStoreReadPreference <docs/DataLakeAtlasStoreReadPreference.md>`__
+* `DataLakeAtlasStoreReadPreferenceTag <docs/DataLakeAtlasStoreReadPreferenceTag.md>`__
+* `DataLakeCloudProviderConfig <docs/DataLakeCloudProviderConfig.md>`__
+* `DataLakeDataProcessRegion <docs/DataLakeDataProcessRegion.md>`__
+* `DataLakeDatabase <docs/DataLakeDatabase.md>`__
+* `DataLakeDatabaseCollection <docs/DataLakeDatabaseCollection.md>`__
+* `DataLakeDatabaseDataSource <docs/DataLakeDatabaseDataSource.md>`__
+* `DataLakeHTTPStore <docs/DataLakeHTTPStore.md>`__
+* `DataLakeOnlineArchiveStore <docs/DataLakeOnlineArchiveStore.md>`__
+* `DataLakeRegion <docs/DataLakeRegion.md>`__
+* `DataLakeS3Store <docs/DataLakeS3Store.md>`__
+* `DataLakeStorage <docs/DataLakeStorage.md>`__
+* `DataLakeStore <docs/DataLakeStore.md>`__
+* `DataLakeTenant <docs/DataLakeTenant.md>`__
+* `DataLakeView <docs/DataLakeView.md>`__
+* `DataMetricThreshold <docs/DataMetricThreshold.md>`__
+* `DataMetricUnits <docs/DataMetricUnits.md>`__
+* `DataProtectionSettings <docs/DataProtectionSettings.md>`__
+* `Database <docs/Database.md>`__
+* `DatabaseUser <docs/DatabaseUser.md>`__
+* `Datadog <docs/Datadog.md>`__
+* `DatadogNotification <docs/DatadogNotification.md>`__
+* `DateCriteria <docs/DateCriteria.md>`__
+* `DedicatedHardwareSpec <docs/DedicatedHardwareSpec.md>`__
+* `DefaultLimit <docs/DefaultLimit.md>`__
+* `DefaultSchedule <docs/DefaultSchedule.md>`__
+* `DeleteCopiedBackups <docs/DeleteCopiedBackups.md>`__
+* `Destination <docs/Destination.md>`__
+* `DiskBackupBaseRestoreMember <docs/DiskBackupBaseRestoreMember.md>`__
+* `DiskBackupCopySetting <docs/DiskBackupCopySetting.md>`__
+* `DiskBackupExportJob <docs/DiskBackupExportJob.md>`__
+* `DiskBackupExportJobRequest <docs/DiskBackupExportJobRequest.md>`__
+* `DiskBackupOnDemandSnapshotRequest <docs/DiskBackupOnDemandSnapshotRequest.md>`__
+* `DiskBackupReplicaSet <docs/DiskBackupReplicaSet.md>`__
+* `DiskBackupRestoreJob <docs/DiskBackupRestoreJob.md>`__
+* `DiskBackupShardedClusterSnapshot <docs/DiskBackupShardedClusterSnapshot.md>`__
+* `DiskBackupShardedClusterSnapshotMember <docs/DiskBackupShardedClusterSnapshotMember.md>`__
+* `DiskBackupSnapshot <docs/DiskBackupSnapshot.md>`__
+* `DiskBackupSnapshotAWSExportBucket <docs/DiskBackupSnapshotAWSExportBucket.md>`__
+* `DiskBackupSnapshotSchedule <docs/DiskBackupSnapshotSchedule.md>`__
+* `DiskGBAutoScaling <docs/DiskGBAutoScaling.md>`__
+* `DiskPartition <docs/DiskPartition.md>`__
+* `EmailNotification <docs/EmailNotification.md>`__
+* `EncryptionAtRest <docs/EncryptionAtRest.md>`__
+* `Endpoint <docs/Endpoint.md>`__
+* `EndpointService <docs/EndpointService.md>`__
+* `Error <docs/Error.md>`__
+* `EventViewForNdsGroup <docs/EventViewForNdsGroup.md>`__
+* `EventViewForOrg <docs/EventViewForOrg.md>`__
+* `ExampleResourceResponseView20230201 <docs/ExampleResourceResponseView20230201.md>`__
+* `ExportStatus <docs/ExportStatus.md>`__
+* `FTSAnalyzers <docs/FTSAnalyzers.md>`__
+* `FTSAnalyzersCharFiltersInner <docs/FTSAnalyzersCharFiltersInner.md>`__
+* `FTSAnalyzersTokenFiltersInner <docs/FTSAnalyzersTokenFiltersInner.md>`__
+* `FTSAnalyzersTokenizer <docs/FTSAnalyzersTokenizer.md>`__
+* `FTSIndex <docs/FTSIndex.md>`__
+* `FTSMappings <docs/FTSMappings.md>`__
+* `FTSMetric <docs/FTSMetric.md>`__
+* `FTSMetrics <docs/FTSMetrics.md>`__
+* `FTSSynonymMappingDefinition <docs/FTSSynonymMappingDefinition.md>`__
+* `FederatedUser <docs/FederatedUser.md>`__
+* `FieldTransformation <docs/FieldTransformation.md>`__
+* `FreeAutoScaling <docs/FreeAutoScaling.md>`__
+* `FreeProviderSettings <docs/FreeProviderSettings.md>`__
+* `GCPAutoScaling <docs/GCPAutoScaling.md>`__
+* `GCPCloudProviderContainer <docs/GCPCloudProviderContainer.md>`__
+* `GCPComputeAutoScaling <docs/GCPComputeAutoScaling.md>`__
+* `GCPConsumerForwardingRule <docs/GCPConsumerForwardingRule.md>`__
+* `GCPEndpointGroup <docs/GCPEndpointGroup.md>`__
+* `GCPEndpointService <docs/GCPEndpointService.md>`__
+* `GCPPeerVpc <docs/GCPPeerVpc.md>`__
+* `GCPProviderSettings <docs/GCPProviderSettings.md>`__
+* `GCPRegionConfig <docs/GCPRegionConfig.md>`__
+* `GeoSharding <docs/GeoSharding.md>`__
+* `GoogleCloudKMS <docs/GoogleCloudKMS.md>`__
+* `Group <docs/Group.md>`__
+* `GroupInvitation <docs/GroupInvitation.md>`__
+* `GroupInvitationRequest <docs/GroupInvitationRequest.md>`__
+* `GroupInvitationUpdateRequest <docs/GroupInvitationUpdateRequest.md>`__
+* `GroupMaintenanceWindow <docs/GroupMaintenanceWindow.md>`__
+* `GroupName <docs/GroupName.md>`__
+* `GroupNotification <docs/GroupNotification.md>`__
+* `GroupPaginatedEvent <docs/GroupPaginatedEvent.md>`__
+* `GroupSettings <docs/GroupSettings.md>`__
+* `HardwareSpec <docs/HardwareSpec.md>`__
+* `HipChatNotification <docs/HipChatNotification.md>`__
+* `HostMetricValue <docs/HostMetricValue.md>`__
+* `HostViewAtlas <docs/HostViewAtlas.md>`__
+* `IdentityProvider <docs/IdentityProvider.md>`__
+* `IndexOptions <docs/IndexOptions.md>`__
+* `IndexRequest <docs/IndexRequest.md>`__
+* `IngestionPipeline <docs/IngestionPipeline.md>`__
+* `IngestionPipelineRun <docs/IngestionPipelineRun.md>`__
+* `IngestionSink <docs/IngestionSink.md>`__
+* `IngestionSource <docs/IngestionSource.md>`__
+* `InheritedRole <docs/InheritedRole.md>`__
+* `InstanceSize <docs/InstanceSize.md>`__
+* `Integration <docs/Integration.md>`__
+* `Invoice <docs/Invoice.md>`__
+* `Key <docs/Key.md>`__
+* `Label <docs/Label.md>`__
+* `LegacyClusterDescription <docs/LegacyClusterDescription.md>`__
+* `LegacyReplicationSpec <docs/LegacyReplicationSpec.md>`__
+* `Limit <docs/Limit.md>`__
+* `LineItem <docs/LineItem.md>`__
+* `Link <docs/Link.md>`__
+* `LinkAtlas <docs/LinkAtlas.md>`__
+* `LiveMigrationRequest <docs/LiveMigrationRequest.md>`__
+* `LiveMigrationResponse <docs/LiveMigrationResponse.md>`__
+* `ManagedNamespace <docs/ManagedNamespace.md>`__
+* `ManagedNamespaces <docs/ManagedNamespaces.md>`__
+* `MatcherField <docs/MatcherField.md>`__
+* `Measurement <docs/Measurement.md>`__
+* `MeasurementViewAtlas <docs/MeasurementViewAtlas.md>`__
+* `MeasurementsGeneralViewAtlas <docs/MeasurementsGeneralViewAtlas.md>`__
+* `MeasurementsIndexes <docs/MeasurementsIndexes.md>`__
+* `MeasurementsNonIndex <docs/MeasurementsNonIndex.md>`__
+* `MetricDataPoint <docs/MetricDataPoint.md>`__
+* `MetricDataPointViewAtlas <docs/MetricDataPointViewAtlas.md>`__
+* `MicrosoftTeams <docs/MicrosoftTeams.md>`__
+* `MicrosoftTeamsNotification <docs/MicrosoftTeamsNotification.md>`__
+* `MongoDBAccessLogs <docs/MongoDBAccessLogs.md>`__
+* `MongoDBAccessLogsList <docs/MongoDBAccessLogsList.md>`__
+* `MonthlySchedule <docs/MonthlySchedule.md>`__
+* `NDSLDAP <docs/NDSLDAP.md>`__
+* `NDSLDAPVerifyConnectivityJobRequest <docs/NDSLDAPVerifyConnectivityJobRequest.md>`__
+* `NDSLDAPVerifyConnectivityJobRequestParams <docs/NDSLDAPVerifyConnectivityJobRequestParams.md>`__
+* `NDSLDAPVerifyConnectivityJobRequestValidation <docs/NDSLDAPVerifyConnectivityJobRequestValidation.md>`__
+* `NDSLabel <docs/NDSLabel.md>`__
+* `NDSUserToDNMapping <docs/NDSUserToDNMapping.md>`__
+* `NamespaceObj <docs/NamespaceObj.md>`__
+* `Namespaces <docs/Namespaces.md>`__
+* `NetworkPermissionEntry <docs/NetworkPermissionEntry.md>`__
+* `NetworkPermissionEntryStatus <docs/NetworkPermissionEntryStatus.md>`__
+* `NewRelic <docs/NewRelic.md>`__
+* `NotificationViewForNdsGroup <docs/NotificationViewForNdsGroup.md>`__
+* `OnDemandCpsSnapshotSource <docs/OnDemandCpsSnapshotSource.md>`__
+* `OnlineArchive <docs/OnlineArchive.md>`__
+* `OnlineArchiveSchedule <docs/OnlineArchiveSchedule.md>`__
+* `Operator <docs/Operator.md>`__
+* `OpsGenie <docs/OpsGenie.md>`__
+* `OpsGenieNotification <docs/OpsGenieNotification.md>`__
+* `OrgFederationSettings <docs/OrgFederationSettings.md>`__
+* `OrgGroup <docs/OrgGroup.md>`__
+* `OrgNotification <docs/OrgNotification.md>`__
+* `OrgPaginatedEvent <docs/OrgPaginatedEvent.md>`__
+* `Organization <docs/Organization.md>`__
+* `OrganizationInvitation <docs/OrganizationInvitation.md>`__
+* `OrganizationInvitationRequest <docs/OrganizationInvitationRequest.md>`__
+* `OrganizationInvitationUpdateRequest <docs/OrganizationInvitationUpdateRequest.md>`__
+* `OrganizationSettings <docs/OrganizationSettings.md>`__
+* `PagerDuty <docs/PagerDuty.md>`__
+* `PagerDutyNotification <docs/PagerDutyNotification.md>`__
+* `PaginatedAlert <docs/PaginatedAlert.md>`__
+* `PaginatedAlertConfig <docs/PaginatedAlertConfig.md>`__
+* `PaginatedApiApiUser <docs/PaginatedApiApiUser.md>`__
+* `PaginatedApiAppUser <docs/PaginatedApiAppUser.md>`__
+* `PaginatedApiAtlasCheckpoint <docs/PaginatedApiAtlasCheckpoint.md>`__
+* `PaginatedApiAtlasDatabaseUser <docs/PaginatedApiAtlasDatabaseUser.md>`__
+* `PaginatedApiAtlasDiskBackupExportJob <docs/PaginatedApiAtlasDiskBackupExportJob.md>`__
+* `PaginatedApiAtlasProviderRegions <docs/PaginatedApiAtlasProviderRegions.md>`__
+* `PaginatedApiAtlasServerlessBackupRestoreJob <docs/PaginatedApiAtlasServerlessBackupRestoreJob.md>`__
+* `PaginatedApiAtlasServerlessBackupSnapshot <docs/PaginatedApiAtlasServerlessBackupSnapshot.md>`__
+* `PaginatedApiInvoice <docs/PaginatedApiInvoice.md>`__
+* `PaginatedApiUserAccessList <docs/PaginatedApiUserAccessList.md>`__
+* `PaginatedAppUser <docs/PaginatedAppUser.md>`__
+* `PaginatedAtlasGroup <docs/PaginatedAtlasGroup.md>`__
+* `PaginatedBackupSnapshot <docs/PaginatedBackupSnapshot.md>`__
+* `PaginatedBackupSnapshotExportBucket <docs/PaginatedBackupSnapshotExportBucket.md>`__
+* `PaginatedCloudBackupReplicaSet <docs/PaginatedCloudBackupReplicaSet.md>`__
+* `PaginatedCloudBackupRestoreJob <docs/PaginatedCloudBackupRestoreJob.md>`__
+* `PaginatedCloudBackupShardedClusterSnapshot <docs/PaginatedCloudBackupShardedClusterSnapshot.md>`__
+* `PaginatedCloudProviderContainer <docs/PaginatedCloudProviderContainer.md>`__
+* `PaginatedClusterDescriptionV15 <docs/PaginatedClusterDescriptionV15.md>`__
+* `PaginatedContainerPeer <docs/PaginatedContainerPeer.md>`__
+* `PaginatedDatabase <docs/PaginatedDatabase.md>`__
+* `PaginatedDiskPartition <docs/PaginatedDiskPartition.md>`__
+* `PaginatedHostViewAtlas <docs/PaginatedHostViewAtlas.md>`__
+* `PaginatedIntegration <docs/PaginatedIntegration.md>`__
+* `PaginatedNetworkAccess <docs/PaginatedNetworkAccess.md>`__
+* `PaginatedOnlineArchive <docs/PaginatedOnlineArchive.md>`__
+* `PaginatedOrgGroup <docs/PaginatedOrgGroup.md>`__
+* `PaginatedOrganization <docs/PaginatedOrganization.md>`__
+* `PaginatedPipelineRun <docs/PaginatedPipelineRun.md>`__
+* `PaginatedPrivateNetworkEndpointIdEntry <docs/PaginatedPrivateNetworkEndpointIdEntry.md>`__
+* `PaginatedRestoreJob <docs/PaginatedRestoreJob.md>`__
+* `PaginatedServerlessInstanceDescription <docs/PaginatedServerlessInstanceDescription.md>`__
+* `PaginatedSnapshot <docs/PaginatedSnapshot.md>`__
+* `PaginatedTeam <docs/PaginatedTeam.md>`__
+* `PaginatedTeamRole <docs/PaginatedTeamRole.md>`__
+* `PaginatedTenantRestore <docs/PaginatedTenantRestore.md>`__
+* `PaginatedTenantSnapshot <docs/PaginatedTenantSnapshot.md>`__
+* `PaginatedUserCert <docs/PaginatedUserCert.md>`__
+* `PartitionField <docs/PartitionField.md>`__
+* `Payment <docs/Payment.md>`__
+* `PemFileInfo <docs/PemFileInfo.md>`__
+* `PerformanceAdvisorIndex <docs/PerformanceAdvisorIndex.md>`__
+* `PerformanceAdvisorOpStats <docs/PerformanceAdvisorOpStats.md>`__
+* `PerformanceAdvisorOperation <docs/PerformanceAdvisorOperation.md>`__
+* `PerformanceAdvisorResponse <docs/PerformanceAdvisorResponse.md>`__
+* `PerformanceAdvisorShape <docs/PerformanceAdvisorShape.md>`__
+* `PerformanceAdvisorSlowQuery <docs/PerformanceAdvisorSlowQuery.md>`__
+* `PerformanceAdvisorSlowQueryList <docs/PerformanceAdvisorSlowQueryList.md>`__
+* `PeriodicCpsSnapshotSource <docs/PeriodicCpsSnapshotSource.md>`__
+* `PipelineRunStats <docs/PipelineRunStats.md>`__
+* `Policy <docs/Policy.md>`__
+* `PolicyItem <docs/PolicyItem.md>`__
+* `PrivateIPMode <docs/PrivateIPMode.md>`__
+* `PrivateNetworkEndpointIdEntry <docs/PrivateNetworkEndpointIdEntry.md>`__
+* `ProjectSettingItem <docs/ProjectSettingItem.md>`__
+* `Prometheus <docs/Prometheus.md>`__
+* `ProviderInstanceSize <docs/ProviderInstanceSize.md>`__
+* `ProviderRegions <docs/ProviderRegions.md>`__
+* `RPUMetricThreshold <docs/RPUMetricThreshold.md>`__
+* `Raw <docs/Raw.md>`__
+* `RawMetricThreshold <docs/RawMetricThreshold.md>`__
+* `RawMetricUnits <docs/RawMetricUnits.md>`__
+* `Refund <docs/Refund.md>`__
+* `RegionConfig <docs/RegionConfig.md>`__
+* `RegionSpec <docs/RegionSpec.md>`__
+* `ReplicationSpec <docs/ReplicationSpec.md>`__
+* `ResourceEventType <docs/ResourceEventType.md>`__
+* `RestoreJob <docs/RestoreJob.md>`__
+* `RestoreJobDelivery <docs/RestoreJobDelivery.md>`__
+* `RestoreJobFileHash <docs/RestoreJobFileHash.md>`__
+* `Role <docs/Role.md>`__
+* `RoleAssignment <docs/RoleAssignment.md>`__
+* `RoleMapping <docs/RoleMapping.md>`__
+* `SMSNotification <docs/SMSNotification.md>`__
+* `SamlIdentityProviderUpdate <docs/SamlIdentityProviderUpdate.md>`__
+* `SampleDatasetStatus <docs/SampleDatasetStatus.md>`__
+* `ServerlessAWSTenantEndpoint <docs/ServerlessAWSTenantEndpoint.md>`__
+* `ServerlessAWSTenantEndpointUpdate <docs/ServerlessAWSTenantEndpointUpdate.md>`__
+* `ServerlessAzureTenantEndpoint <docs/ServerlessAzureTenantEndpoint.md>`__
+* `ServerlessAzureTenantEndpointUpdate <docs/ServerlessAzureTenantEndpointUpdate.md>`__
+* `ServerlessBackupOptions <docs/ServerlessBackupOptions.md>`__
+* `ServerlessBackupRestoreJob <docs/ServerlessBackupRestoreJob.md>`__
+* `ServerlessBackupSnapshot <docs/ServerlessBackupSnapshot.md>`__
+* `ServerlessEventTypeViewAlertable <docs/ServerlessEventTypeViewAlertable.md>`__
+* `ServerlessInstanceDescription <docs/ServerlessInstanceDescription.md>`__
+* `ServerlessInstanceDescriptionConnectionStrings <docs/ServerlessInstanceDescriptionConnectionStrings.md>`__
+* `ServerlessInstanceDescriptionConnectionStringsPrivateEndpoint <docs/ServerlessInstanceDescriptionConnectionStringsPrivateEndpoint.md>`__
+* `ServerlessInstanceDescriptionConnectionStringsPrivateEndpointEndpoint <docs/ServerlessInstanceDescriptionConnectionStringsPrivateEndpointEndpoint.md>`__
+* `ServerlessInstanceDescriptionCreate <docs/ServerlessInstanceDescriptionCreate.md>`__
+* `ServerlessInstanceDescriptionUpdate <docs/ServerlessInstanceDescriptionUpdate.md>`__
+* `ServerlessMetricThreshold <docs/ServerlessMetricThreshold.md>`__
+* `ServerlessMetricUnits <docs/ServerlessMetricUnits.md>`__
+* `ServerlessProviderSettings <docs/ServerlessProviderSettings.md>`__
+* `ServerlessTenantEndpoint <docs/ServerlessTenantEndpoint.md>`__
+* `ServerlessTenantEndpointCreate <docs/ServerlessTenantEndpointCreate.md>`__
+* `ServerlessTenantEndpointUpdate <docs/ServerlessTenantEndpointUpdate.md>`__
+* `Slack <docs/Slack.md>`__
+* `SlackNotification <docs/SlackNotification.md>`__
+* `Snapshot <docs/Snapshot.md>`__
+* `SnapshotPart <docs/SnapshotPart.md>`__
+* `SnapshotRetention <docs/SnapshotRetention.md>`__
+* `SnapshotSchedule <docs/SnapshotSchedule.md>`__
+* `Source <docs/Source.md>`__
+* `SynonymSource <docs/SynonymSource.md>`__
+* `SystemStatus <docs/SystemStatus.md>`__
+* `Tag <docs/Tag.md>`__
+* `TargetOrg <docs/TargetOrg.md>`__
+* `TargetOrgRequest <docs/TargetOrgRequest.md>`__
+* `Team <docs/Team.md>`__
+* `TeamNotification <docs/TeamNotification.md>`__
+* `TeamResponse <docs/TeamResponse.md>`__
+* `TeamRole <docs/TeamRole.md>`__
+* `TenantRegionConfig <docs/TenantRegionConfig.md>`__
+* `TenantRestore <docs/TenantRestore.md>`__
+* `TenantSnapshot <docs/TenantSnapshot.md>`__
+* `ThresholdViewInteger <docs/ThresholdViewInteger.md>`__
+* `TimeMetricThreshold <docs/TimeMetricThreshold.md>`__
+* `TimeMetricUnits <docs/TimeMetricUnits.md>`__
+* `Toggle <docs/Toggle.md>`__
+* `TokenFilterasciiFolding <docs/TokenFilterasciiFolding.md>`__
+* `TokenFilterdaitchMokotoffSoundex <docs/TokenFilterdaitchMokotoffSoundex.md>`__
+* `TokenFilteredgeGram <docs/TokenFilteredgeGram.md>`__
+* `TokenFiltericuFolding <docs/TokenFiltericuFolding.md>`__
+* `TokenFiltericuNormalizer <docs/TokenFiltericuNormalizer.md>`__
+* `TokenFilterlength <docs/TokenFilterlength.md>`__
+* `TokenFilterlowercase <docs/TokenFilterlowercase.md>`__
+* `TokenFilternGram <docs/TokenFilternGram.md>`__
+* `TokenFilterregex <docs/TokenFilterregex.md>`__
+* `TokenFilterreverse <docs/TokenFilterreverse.md>`__
+* `TokenFiltershingle <docs/TokenFiltershingle.md>`__
+* `TokenFiltersnowballStemming <docs/TokenFiltersnowballStemming.md>`__
+* `TokenFilterstopword <docs/TokenFilterstopword.md>`__
+* `TokenFiltertrim <docs/TokenFiltertrim.md>`__
+* `TokenizeredgeGram <docs/TokenizeredgeGram.md>`__
+* `Tokenizerkeyword <docs/Tokenizerkeyword.md>`__
+* `TokenizernGram <docs/TokenizernGram.md>`__
+* `TokenizerregexCaptureGroup <docs/TokenizerregexCaptureGroup.md>`__
+* `TokenizerregexSplit <docs/TokenizerregexSplit.md>`__
+* `Tokenizerstandard <docs/Tokenizerstandard.md>`__
+* `TokenizeruaxUrlEmail <docs/TokenizeruaxUrlEmail.md>`__
+* `Tokenizerwhitespace <docs/Tokenizerwhitespace.md>`__
+* `TriggerIngestionRequest <docs/TriggerIngestionRequest.md>`__
+* `UpdateCustomDBRole <docs/UpdateCustomDBRole.md>`__
+* `UserAccessList <docs/UserAccessList.md>`__
+* `UserCert <docs/UserCert.md>`__
+* `UserEventTypeViewForOrg <docs/UserEventTypeViewForOrg.md>`__
+* `UserNotification <docs/UserNotification.md>`__
+* `UserRoleAssignment <docs/UserRoleAssignment.md>`__
+* `UserScope <docs/UserScope.md>`__
+* `UserSecurity <docs/UserSecurity.md>`__
+* `Validation <docs/Validation.md>`__
+* `VictorOps <docs/VictorOps.md>`__
+* `VictorOpsNotification <docs/VictorOpsNotification.md>`__
+* `Webhook <docs/Webhook.md>`__
+* `WebhookNotification <docs/WebhookNotification.md>`__
+* `WeeklySchedule <docs/WeeklySchedule.md>`__
+* `X509Certificate <docs/X509Certificate.md>`__

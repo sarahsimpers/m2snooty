@@ -1,181 +1,44 @@
-TLDR: This is a markdown to Snooty-friendly rST converter. It's adapted from M2R, a now archived Github repo, and adjusted to be specific to Snooty and the MongoDB cloud team's workflow.
 
-Old Readme:
 
-# M2R
-===
+# m2Snooty
 
-[![PyPI](https://img.shields.io/pypi/v/m2r.svg)](https://pypi.python.org/pypi/m2r)
-[![PyPI version](https://img.shields.io/pypi/pyversions/m2r.svg)](https://pypi.python.org/pypi/m2r)
-[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://miyakogi.github.io/m2r)
-[![Build Status](https://travis-ci.org/miyakogi/m2r.svg?branch=master)](https://travis-ci.org/miyakogi/m2r)
-[![codecov](https://codecov.io/gh/miyakogi/m2r/branch/master/graph/badge.svg)](https://codecov.io/gh/miyakogi/m2r)
+This is a markdown-to-Snooty-rST converter. It's adapted from [M2R](https://github.com/miyakogi/m2r), an archived Github repo, and adjusted to be specific to Snooty and the MongoDB documentation team's workflow.
 
---------------------------------------------------------------------------------
-
-M2R converts a markdown file including reStructuredText (rst) markups to a valid
-rst format.
-
-## Why another converter?
-
-I wanted to write sphinx document in markdown, since it's widely used now and
-easy to write code blocks and lists. However, converters using pandoc or
-recommonmark do not support many rst markups and sphinx extensions. For
-example, rst's reference link like ``see `ref`_`` (this is very convenient in
-long document in which same link appears multiple times) will be converted to
-a code block in HTML like `see <code>ref</code>_`, which is not expected.
-
-## Features
-
-* Basic markdown and some extensions (see below)
-    * inline/block-level raw html
-    * fenced-code block
-    * tables
-    * footnotes (``[^1]``)
-* Inline- and Block-level rst markups
-    * single- and multi-line directives (`.. directive::`)
-    * inline-roles (``:code:`print(1)` ...``)
-    * ref-link (``see `ref`_``)
-    * footnotes (``[#fn]_``)
-    * math extension inspired by [recommonmark](https://recommonmark.readthedocs.io/en/latest/index.html)
-* Sphinx extension
-    * add markdown support for sphinx
-    * ``mdinclude`` directive to include markdown from md or rst files
-    * option to parse relative links into ref and doc directives (``m2r_parse_relative_links``)
-* Pure python implementation
-    * pandoc is not required
+To learn more about M2R, see [M2R's README](https://github.com/miyakogi/m2r#readme)
 
 ## Installation
 
 Python 3.7+ is required.
 
-```
-pip install m2r
-```
-
-Or,
+1. Install the original m2r to get all dependencies for the program:
 
 ```
 python3 -m pip install m2r
 ```
 
+2. Clone this repo.
+3. Follow the usage instructions below.
+
 ## Usage
 
-### Command Line
+There are two use cases for m2snooty:
 
-`m2r` command converts markdown file to rst format.
+### One-time conversion
+
+You can use m2snooty to convert .md files to .rst files on a one-time basis and then manually move them to their destination repo.
+
+m2snooty converts your markdown file to rst and stores it in a file with an .rst extension. It places the .rst file in the same directory as the markdown file.
+
+For one-time conversion, run the following command in the directory containing the markdown file. Replace `<your-repo-dir>` with the directory where you keep your Github repos and `file.md` with the name of the file.
 
 ```
-m2r your_document.md [your_document2.md ...]
+python3 ~/<your-repo-dir>/m2snooty/m2snooty.py file.md
 ```
 
-Then you will find `your_document.rst` in the same directory.
+Then, change the .rst file extension to a .txt file extension and place in the repo where you want to build the page with Snooty.
 
-### Programmatic Use
+### Ongoing conversion
 
-Import `m2r.convert` function and call it with markdown text.
-Then it will return converted text.
+You can use m2snooty together with [docurl](https://github.com/mongodb/docs-docurl) for ongoing conversion. This is ideal when you need to maintain a Github repo containing markdown docs, but you also want an up-to-date copy of those docs rendered with Snooty in a MongoDB docs site. To do this, set up docurl to continuously pull .md files into a directory that you add to .gitignore (to prevent Snooty errors). Then, keep the Snooty versions updated by running `docurl fetch` and running a script (like [this one for the cloud docs team](https://github.com/sarahsimpers/m2snooty/blob/main/m2snooty-script.sh)) to quickly run m2snooty.py, move the rST files to a folder that Git tracks, and change them to .txt files.
 
-```python
-from m2r import convert
-rst = convert('# Title\n\nSentence.')
-print(rst)
-# Title
-# =====
-#
-# Sentence.
-```
-
-Or, use `parse_from_file` function to load markdown file and obtain converted
-text.
-
-```python
-from m2r import parse_from_file
-output = parse_from_file('markdown_file.md')
-```
-
-This is an example of setup.py to write README in markdown, and publish it to
-PyPI as rst format.
-
-```python
-readme_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'README.md')
-try:
-    from m2r import parse_from_file
-    readme = parse_from_file(readme_file)
-except ImportError:
-    # m2r may not be installed in user environment
-    with open(readme_file) as f:
-        readme = f.read()
-setup(
-    ...,
-    long_description=readme,
-    ...,
-)
-```
-
-### Sphinx Integration
-
-In your conf.py, add the following lines.
-
-```python
-extensions = [
-    ...,
-    'm2r',
-]
-
-# source_suffix = '.rst'
-source_suffix = ['.rst', '.md']
-```
-
-Write index.md and run `make html`.
-
-When `m2r` extension is enabled on sphinx and `.md` file is loaded, m2r
-converts to rst and pass to sphinx, not making new `.rst` file.
-
-#### mdinclude directive
-
-Like `.. include:: file` directive, `.. mdinclude:: file` directive inserts
-markdown file at the line.
-
-Note: do not use `.. include:: file` directive to include markdown file even if
-in the markdown file, please use `.. mdinclude:: file` instead.
-
-## Restrictions
-
-* In the rst's directives, markdown is not available. Please write in rst.
-* Column alignment of tables is not supported. (rst does not support this feature)
-* Heading with overline-and-underline is not supported.
-  * Heading with underline is OK
-* Rst heading marks are currently hard-coded and unchangeable.
-  * H1: `=`, H2: `-`, H3: `^`, H4: `~`, H5: `"`, H6: `#`
-
-If you find any bug or unexpected behaviour, please report it to
-[Issues](https://github.com/miyakogi/m2r/issues).
-
-## Example
-
-See [example document](https://miyakogi.github.io/m2r/example.html) and [its
-source code](https://github.com/miyakogi/m2r/blob/master/docs/example.md).
-
-I'm using m2r for writing user guide of [WDOM](https://github.com/miyakogi/wdom).
-So you can see it as another example. Its [HTML is
-here](http://wdom-py.readthedocs.io/en/latest/guide/index.html), and [its
-source code is here](https://github.com/miyakogi/wdom/tree/dev/docs/guide).
-
-### Demo editor
-
-Demo editor of m2r is available.
-If you are interested in m2r, please try it.
-
-[https://github.com/miyakogi/m2rdemo](https://github.com/miyakogi/m2rdemo)
-
-## Acknowledgement
-
-m2r is written as an extension of
-[mistune](http://mistune.readthedocs.io/en/latest/), which is highly extensible
-pure-python markdown parser.
-Without the mistune, I couldn't write this. Thank you!
-
-## Licence
-
-[MIT](https://github.com/miyakogi/m2r/blob/master/LICENSE)
+To run the script for the cloud docs team, writers run `sh ~/Projects/m2snooty/m2snooty-script.sh -p Projects` and replace both instances of `Projects` with the directory that houses their repos.

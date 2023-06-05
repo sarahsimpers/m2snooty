@@ -1,12 +1,8 @@
-# NO MORE UPDATES
+TLDR: This is a markdown to Snooty-friendly rST converter. It's adapted from M2R, a now archived Github repo, and adjusted to be specific to Snooty and the MongoDB cloud team's workflow.
 
-Feel free to fork and update.
+Old Readme:
 
----
-
-Old README
-
-M2R
+# M2R
 ===
 
 [![PyPI](https://img.shields.io/pypi/v/m2r.svg)](https://pypi.python.org/pypi/m2r)

@@ -27,3 +27,19 @@ for f in $MOVEDRSTFILES
 do  
   mv -- "$f" "${f%.rst}.txt"
 done
+
+TXTFILES=~/$projects/cloud-docs/source/sdk/go/*.txt
+for f in $TXTFILES
+do  
+  echo "Changing hardcoded URLs and adding notes/refs in $f..."
+
+  filename="${f##*/}"
+  sed -i '' "1s%^%\n.. _atlas-sdk-${filename%.txt}: \n%" $f
+
+  sed -i '' "s%\`Error Handling <https:\/\/github.com\/mongodb\/atlas-sdk-go\/blob\/main\/docs\/doc_2_error_handling.md>\`__%:ref:\`atlas-sdk-error_handling\`%g" $f
+
+  sed -i '' "s%\`Authenticate using the Atlas Go SDK <https:\/\/github.com\/mongodb\/atlas-sdk-go\/blob\/main\/docs\/doc_4_authentication.md>\`__%:ref:\`atlas-sdk-authentication\`%g" $f
+
+  sed -i '' "1s%^%.. NOTE TO WRITERS: Don't edit these files. Docurl pulls the content in automatically from the mongodb\/atlas-sdk-go repo. To make copy edits, change the source files here: https:\/\/github.com\/mongodb\/atlas-sdk-go\/tree\/main\/docs. For rST issues, open a Jira ticket and assign it to Sarah Simpers. \n%" $f
+
+done

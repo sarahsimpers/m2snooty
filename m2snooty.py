@@ -236,6 +236,8 @@ class RestRenderer(mistune.Renderer):
         """
         return '\n\n.. raw:: html\n\n' + self._indent_block(html) + '\n\n'
 
+# Heading behavior 
+
     def header(self, text, level, raw=None):
         """Rendering header/heading tags like ``<h1>`` ``<h2>``.
 
@@ -243,8 +245,16 @@ class RestRenderer(mistune.Renderer):
         :param level: a number for the header level, for example: 1.
         :param raw: raw text content of the header.
         """
-        return '\n{0}\n{1}\n'.format(text,
-                                     self.hmarks[level] * column_width(text))
+
+# H1 displays border both above and below the text
+        if level == 1:
+
+            return '\n{1}\n{0}\n{1}\n'.format(text, self.hmarks[level] * column_width(text))
+
+# Other headers display border below the text only
+        else:
+
+            return '\n{0}\n{1}\n'.format(text, self.hmarks[level] * column_width(text))
 
     def hrule(self):
         """Rendering method for ``<hr>`` tag."""

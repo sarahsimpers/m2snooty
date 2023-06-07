@@ -15,21 +15,8 @@ do
   # take action on each file. $f store current file name
 done
 
-RSTFILES=~/$projects/cloud-docs/source/includes/sdk/go/markdown/*.rst
-for f in $RSTFILES
-do
-  echo "Moving $f"
-  mv $f ~/$projects/cloud-docs/source/sdk/go/
-done
-
-MOVEDRSTFILES=~/$projects/cloud-docs/source/sdk/go/*.rst
-for f in $MOVEDRSTFILES
-do  
-  mv -- "$f" "${f%.rst}.txt"
-done
-
-TXTFILES=~/$projects/cloud-docs/source/sdk/go/*.txt
-for f in $TXTFILES
+RSTFILEURLS=~/$projects/cloud-docs/source/includes/sdk/go/markdown/*.rst
+for f in $RSTFILEURLS
 do  
   echo "Changing hardcoded URLs and adding notes/refs in $f..."
 
@@ -42,4 +29,17 @@ do
 
   sed -i '' "1s%^%.. NOTE TO WRITERS: Don't edit these files. Docurl pulls the content in automatically from the mongodb\/atlas-sdk-go repo. To make copy edits, change the source files here: https:\/\/github.com\/mongodb\/atlas-sdk-go\/tree\/main\/docs. For rST issues, open a Jira ticket and assign it to Sarah Simpers. \n%" $f
 
+done
+
+RSTFILES=~/$projects/cloud-docs/source/includes/sdk/go/markdown/*.rst
+for f in $RSTFILES
+do
+  echo "Moving $f"
+  mv $f ~/$projects/cloud-docs/source/sdk/go/
+done
+
+MOVEDRSTFILES=~/$projects/cloud-docs/source/sdk/go/*.rst
+for f in $MOVEDRSTFILES
+do  
+  mv -- "$f" "${f%.rst}.txt"
 done

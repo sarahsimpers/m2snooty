@@ -12,7 +12,6 @@ for f in $FILES
 do
   echo "Transforming $f to Snooty-friendly rST..."
   python3 ~/$projects/m2snooty/m2snooty.py $f
-  # take action on each file. $f store current file name
 done
 
 RSTFILEURLS=~/$projects/cloud-docs/source/includes/sdk/go/markdown/*.rst
@@ -34,7 +33,7 @@ done
 RSTFILES=~/$projects/cloud-docs/source/includes/sdk/go/markdown/*.rst
 for f in $RSTFILES
 do
-  echo "Moving $f"
+  echo "Moving $f..."
   mv $f ~/$projects/cloud-docs/source/sdk/go/
 done
 

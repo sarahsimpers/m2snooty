@@ -20,7 +20,7 @@ do
   echo "Changing hardcoded URLs and adding notes/refs in $f..."
 
   filename="${f##*/}"
-  sed -i '' "1s%^%\n.. _atlas-sdk-${filename%.txt}: \n%" $f
+  sed -i '' "1s%^%\n.. _atlas-sdk-${filename%.rst}: \n%" $f
 
   sed -i '' "s%\`Error Handling <https:\/\/github.com\/mongodb\/atlas-sdk-go\/blob\/main\/docs\/doc_2_error_handling.md>\`__%:ref:\`atlas-sdk-error_handling\`%g" $f
 
